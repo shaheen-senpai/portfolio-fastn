@@ -1,40 +1,74 @@
--- ds.page: Welcome to doc-site
+-- import: shaheen-senpai.github.io/portfolio-fastn/navbar as nb
+
+-- page:
 
 
-⚡️ `doc-site` will help you create a beautiful documentation site in no time.
-
-It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, blog, etc).
-
-[Click here](https://fastn-community.github.io/doc-site/) to read doc-site
-documentation.
-
--- ds.h3: 🚀 Fast Track 
-
-Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
-project in just 5 minutes!
-
--- ds.h3: 🌟 Whats next?
-
-Create your first page. 
-[Click here to know more](https://fastn-community.github.io/doc-site/components/page/).
-
--- ds.h3: 👀 Want to learn more?
-
-Feel free to check [our expander course](https://fastn.com/expander/) or jump
-into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
 
--- ds.h3: 🎯 Used by?
 
-Our all documentation sites uses this `doc-site` theme.
+-- component page:
 
-- [fastn.com](https://fastn.com/home/)
-- [FifthTry.com](https://www.fifthtry.com/)
+-- ftd.column:
+width: fill-container
+height if {ftd.device == "desktop"}: fill-container
+height if {ftd.device == "mobile"}: fill-container
+;; css: $assets.files.style.main.css
+;; classes: html
 
--- ds.h2: Learn fastn and become a pro?
 
-You are one click away, just check [our documentation](https://fastn.com/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+-- ftd.column:
+width: fill-container
+height: fill-container
+height if {ftd.device == "mobile"}: fill-container
+background.solid: #0a192f
 
--- end: ds.page
+;; start of page
+
+
+
+;; navbar component
+-- nb.navbar: 
+logo: $assets.files.assets.logo.svg
+cta-text-1: About
+cta-text-2: Experience
+cta-text-3: Work
+cta-text-4: Contact
+cta-link-1: index.html
+cta-link-2: /landing_page_2/about/
+cta-link-3: index.html#contact-1
+cta-link-4: index.html#blog-1
+cta-button-text: Resume
+cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
+
+-- nb.navbar-drop-down:
+cta-text-1: About
+cta-text-2: Experience
+cta-text-3: Work
+cta-text-4: Contact
+cta-link-1: index.html
+cta-link-2: /landing_page_2/about/
+cta-link-3: index.html#contact-1
+cta-link-4: index.html#blog-1
+cta-button-text: Resume
+cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
+;; navbar end
+
+
+
+
+
+
+
+
+
+
+
+
+;; end of page
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page
+
