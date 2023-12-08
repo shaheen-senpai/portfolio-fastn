@@ -1,0 +1,237 @@
+-- import: shaheen-senpai.github.io/fira-code/assets as fira-code-assets
+
+
+
+;;navbar shadow specification
+-- ftd.shadow s: 
+color: #020c1bb3
+x-offset.px: 0 
+y-offset.px: 10 
+blur.px: 30
+spread.px: -10
+
+;;button shadow specification
+-- ftd.shadow s-button:
+color: #64ffda
+x-offset.px: 3
+y-offset.px: 5
+blur.px: 3
+spread.px: 0
+
+
+
+
+;; individual navbar specification headers
+-- component header:
+string title:
+string description:
+string link:
+boolean $hover: false
+
+-- ftd.row:
+padding.px: 10
+spacing.fixed.px: 5
+$on-mouse-enter$: $ftd.set-bool($a = $header.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $header.hover, v = false)
+link: $header.link
+
+-- ftd.text: $header.title
+role: $fira-code-size-14-400
+color: #64ffda
+
+-- ftd.text: $header.description
+role: $fira-code-size-14-400
+color: #ccd6f6
+color if {$header.hover}: #64ffda
+
+-- end: ftd.row
+
+-- end: header
+
+
+
+
+
+-- boolean $drop-down-open: false
+
+
+-- component navbar:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+optional string cta-link-1: 
+optional string cta-link-2:
+optional string cta-link-3:
+optional string cta-link-4:
+string cta-button-text:
+string cta-button-link:
+boolean $hover-button: false
+
+
+-- ftd.row:
+width: fill-container
+height.fixed.px: 70
+padding-horizontal.px: 50
+padding-vertical.px: 10
+anchor: window
+z-index: 50
+spacing: space-between
+background.solid: #0a192fd9
+shadow: $s 
+
+
+-- ftd.image: 
+height: fill-container
+src: $navbar.logo
+
+-- ftd.image:
+if: {ftd.device == "mobile"}
+src: $assets.files.assets.hamburger-menu.svg
+height: fill-container
+$on-click$: $ftd.set-bool($a = $drop-down-open, v = true)
+
+-- ftd.row:
+if: {ftd.device == "desktop"}
+height: fill-container
+align-content: center   
+spacing.fixed.px: 2
+
+-- header:
+title: 01\. 
+description: $navbar.cta-text-1
+link: $navbar.cta-link-1
+
+-- header:
+title: 02\.
+description: $navbar.cta-text-2
+link: $navbar.cta-link-2
+
+-- header:
+title: 03\.
+description: $navbar.cta-text-3
+link: $navbar.cta-link-3
+
+-- header:  
+title: 04\.
+description: $navbar.cta-text-4
+link: $navbar.cta-link-4
+
+-- ftd.text: $navbar.cta-button-text
+role: $fira-code-size-14-400
+color: #ffffff
+color if {$navbar.hover-button}: #64ffda
+padding-horizontal.px: 16
+padding-vertical.px: 12
+border-width.px: 1
+border-radius.px: 4
+border-color: #64ffda
+margin-left.px: 20
+$on-mouse-enter$: $ftd.set-bool($a = $navbar.hover-button, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $navbar.hover-button, v = false)
+link: $navbar.cta-button-link
+shadow if {$navbar.hover-button}: $s-button
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: navbar
+
+
+
+
+
+
+
+
+
+
+-- component navbar-drop-down:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+optional string cta-link-1: 
+optional string cta-link-2:
+optional string cta-link-3:
+optional string cta-link-4:
+string cta-button-text:
+string cta-button-link:
+
+-- ftd.column:
+if: {$drop-down-open}
+height: fill-container
+width: fill-container
+background.solid: #0a192fd9
+padding.px: 50
+spacing.fixed.vh: 5
+anchor: window
+z-index: 100
+
+-- ftd.image:
+src: $assets.files.assets.close.svg
+height.fixed.px: 40
+width.fixed.px: 40
+align-self: end
+$on-click$: $ftd.set-bool($a = $drop-down-open, v = false)
+
+-- header:
+title: 01\.
+description: $navbar-drop-down.cta-text-1
+link: $navbar-drop-down.cta-link-1
+
+-- header:
+title: 02\.
+description: $navbar-drop-down.cta-text-2
+link: $navbar-drop-down.cta-link-2
+
+-- header:
+title: 03\.
+description: $navbar-drop-down.cta-text-3
+link: $navbar-drop-down.cta-link-3
+
+-- header:
+title: 04\.
+description: $navbar-drop-down.cta-text-4
+link: $navbar-drop-down.cta-link-4
+
+-- ftd.text: $navbar-drop-down.cta-button-text
+role: $fira-code-size-14-400
+color: #ffffff
+padding-horizontal.px: 50
+padding-vertical.px: 18
+border-width.px: 1
+border-radius.px: 4
+border-color: #64ffda
+align-self: center
+link: $navbar-drop-down.cta-button-link
+
+-- end: ftd.column
+
+-- end: navbar-drop-down
+
+
+
+
+
+
+
+
+
+
+-- ftd.type fira-code-size-14-desktop:
+size.px: 14
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-14-mobile:
+size.px: 16
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-14-400:
+desktop: $fira-code-size-14-desktop
+mobile: $fira-code-size-14-mobile
