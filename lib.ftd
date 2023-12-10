@@ -1,2 +1,170 @@
 -- import: shaheen-senpai.github.io/fira-code/assets as fira-code-assets
+-- import: shaheen-senpai.github.io/inter-font/assets as inter-font-assets
 
+
+
+
+
+
+
+;;button shadow specification
+-- ftd.shadow s-button:
+color: #64ffda
+x-offset.px: 3
+y-offset.px: 5
+blur.px: 3
+spread.px: 0
+
+
+
+
+
+
+
+
+
+
+-- component hero:
+string name:
+string title:
+string description:
+string cta-button-text:
+string cta-button-link:
+boolean $hover: false
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+margin-horizontal.px if { ftd.device == "desktop" }: 100
+align-content: center
+
+
+-- ftd.column:
+width: fill-container
+height: hug-content
+
+-- ftd.text: Hi, my name is
+role: $fira-code-size-20-400
+color: #64ffda
+margin-left.px: 4
+margin-bottom.px if { ftd.device == "desktop" }: 30
+margin-bottom.px if { ftd.device == "mobile" }: 20
+
+-- ftd.text: $hero.name
+role: $inter-font-size-80-600
+color: #ccd6f6
+
+-- ftd.text: $hero.title
+role: $inter-font-size-80-600
+color: #8892b0
+margin-top.px: 5
+
+-- ftd.text: $hero.description
+width.fixed.percent if { ftd.device == "desktop" }: 50
+role: $inter-font-size-20-400
+color: #8892b0
+margin-top.px: 20   
+
+
+-- ftd.text: $hero.cta-button-text
+role: $fira-code-size-20-400
+color: #64ffda
+margin-top.px: 50
+padding-horizontal.px: 28
+padding-vertical.px: 20
+border-radius.px: 4
+border-width.px: 1
+shadow if {$hero.hover}: $s-button
+$on-mouse-enter$: $ftd.set-bool($a = $hero.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero.hover, v = false)
+link: $hero.cta-button-link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.type fira-code-size-16-desktop:
+size.px: 20
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-16-mobile:
+size.px: 16
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-20-400:
+desktop: $fira-code-size-16-desktop
+mobile: $fira-code-size-16-mobile
+
+
+
+
+-- ftd.type inter-font-size-80-desktop:
+size.px: 72
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-40-mobile:
+size.px: 40
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-80-600:
+desktop: $inter-font-size-80-desktop
+mobile: $inter-font-size-40-mobile
+
+
+
+
+-- ftd.type inter-font-size-20-desktop:
+size.px: 20
+weight: 400
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-20-mobile:
+size.px: 16
+weight: 400
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-20-400:
+desktop: $inter-font-size-20-desktop
+mobile: $inter-font-size-20-mobile
