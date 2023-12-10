@@ -7,7 +7,7 @@
 
 
 
-;;button shadow specification
+;; button shadow specification
 -- ftd.shadow s-button:
 color: #64ffda
 x-offset.px: 3
@@ -15,15 +15,18 @@ y-offset.px: 5
 blur.px: 3
 spread.px: 0
 
+;; photo shadow specification
+-- ftd.shadow s-photo:
+color: #64ffda80
+x-offset.px: 0
+y-offset.px: 20
+blur.px: 30
+spread.px: -10
 
 
 
 
-
-
-
-
-
+;;-----------------------------------------------------------------------------------------------------
 -- component hero:
 string name:
 string title:
@@ -34,8 +37,8 @@ boolean $hover: false
 
 -- ftd.column:
 width: fill-container
-height: fill-container
-margin-horizontal.px if { ftd.device == "desktop" }: 100
+height.fixed.vh: 100
+padding-horizontal.px if { ftd.device == "desktop" }: 100
 align-content: center
 
 
@@ -84,6 +87,7 @@ link: $hero.cta-button-link
 -- end: ftd.column
 
 -- end: hero
+;;-----------------------------------------------------------------------------------------------------
 
 
 
@@ -95,7 +99,136 @@ link: $hero.cta-button-link
 
 
 
+;;-----------------------------------------------------------------------------------------------------
+-- component about:
+ftd.image-src cover:
+string para-1:
+string para-2:
+string para-3:
 
+-- ftd.column:
+width: fill-container
+height.fixed.vh: 100
+padding-horizontal.px if { ftd.device == "desktop" }: 100
+align-content: center
+
+-- ftd.column:
+width: fill-container
+height: hug-content
+id: about
+
+
+;; title and number
+-- ftd.row:
+width: fill-container
+padding.px: 10
+spacing.fixed.px: 5
+align-content: left
+margin-bottom.px: 40
+margin-top.px: 10
+
+-- ftd.text: 01\.
+role: $fira-code-size-20-400
+color: #64ffda
+
+-- ftd.text: About Me
+role: $inter-font-size-26-600
+color: #ccd6f6
+
+-- ftd.row:
+margin-left.percent: 2
+width.fixed.percent: 38
+width.fixed.percent if { ftd.device == "mobile" }: 45
+height.fixed.px: 1
+background.solid: #233554
+
+-- end: ftd.row
+
+-- end: ftd.row
+;; end: title and number
+
+
+;; about content desktop
+-- ftd.row:
+if: { ftd.device == "desktop" }
+width: fill-container
+height: hug-content
+spacing: space-between
+
+-- about-content:
+para-1: $about.para-1
+para-2: $about.para-2
+para-3: $about.para-3
+
+-- ftd.image:   
+width.fixed.percent if { ftd.device == "desktop" }: 35
+src: $about.cover
+border-radius.px: 8
+shadow: $s-photo
+
+-- end: ftd.row
+;; end: about content desktop
+
+
+;; about content mobile
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+height: hug-content
+spacing.fixed.px: 20
+
+-- about-content:
+para-1: $about.para-1
+para-2: $about.para-2
+para-3: $about.para-3
+
+-- ftd.image:
+width.fixed.percent if { ftd.device == "mobile" }: 100
+src: $about.cover
+border-radius.px: 8
+shadow: $s-photo
+
+-- end: ftd.column
+;; end: about content mobile
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: about
+
+
+
+
+
+
+-- component about-content:
+string para-1:
+string para-2:
+string para-3:
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 60
+height: hug-content
+
+-- ftd.text: $about-content.para-1
+role: $inter-font-size-20-400
+color: #8892b0
+
+-- ftd.text: $about-content.para-2
+role: $inter-font-size-20-400
+color: #8892b0
+
+-- ftd.text: $about-content.para-3
+role: $inter-font-size-20-400
+color: #8892b0
+
+-- end: ftd.column
+
+-- end: about-content
+
+;;-----------------------------------------------------------------------------------------------------
 
 
 
@@ -168,3 +301,21 @@ font-family: $inter-font-assets.fonts.Inter
 -- ftd.responsive-type inter-font-size-20-400:
 desktop: $inter-font-size-20-desktop
 mobile: $inter-font-size-20-mobile
+
+
+
+
+-- ftd.type inter-font-size-26-desktop:
+size.px: 26
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-26-mobile:
+size.px: 26
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-26-600:
+desktop: $inter-font-size-26-desktop
+mobile: $inter-font-size-26-mobile
