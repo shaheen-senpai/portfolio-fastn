@@ -1,12 +1,29 @@
 -- import: shaheen-senpai.github.io/portfolio-fastn/navbar as nb
 
+
+
 -- page:
+
+
+-- lib.hero:
+name: Shaheen Siddique. N
+title: I love to Code.
+description: I am a passionate and driven student pursuing a BTech degree in computer science, dedicated to gaining hands-on experience and knowledge in various aspects of technology. 
+cta-button-text: Check out my work!
+cta-button-link: index.html
+
+
+-- end: page
+
+
+
 
 
 
 
 
 -- component page:
+children child:
 
 -- ftd.column:
 width: fill-container
@@ -54,14 +71,16 @@ cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
 ;; navbar end
 
 
+;; components start
+-- ftd.column:
+width: fill-container
+height: fill-container
+padding-horizontal.percent: 9
+children: $page.child
 
 
-
-
-
-
-
-
+-- end: ftd.column
+;; components end
 
 
 ;; end of page
@@ -71,4 +90,3 @@ cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
 -- end: ftd.column
 
 -- end: page
-

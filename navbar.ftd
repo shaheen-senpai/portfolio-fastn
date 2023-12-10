@@ -73,7 +73,8 @@ boolean $hover-button: false
 -- ftd.row:
 width: fill-container
 height.fixed.px: 70
-padding-horizontal.px: 50
+padding-horizontal.px if { ftd.device == "desktop" }: 50
+padding-horizontal.percent if { ftd.device == "mobile" }: 9
 padding-vertical.px: 10
 anchor: window
 z-index: 50
