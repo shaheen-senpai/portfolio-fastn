@@ -86,6 +86,7 @@ shadow: $s
 -- ftd.image: 
 height: fill-container
 src: $navbar.logo
+link: index.html
 
 -- ftd.image:
 if: {ftd.device == "mobile"}
