@@ -135,14 +135,26 @@ color: #64ffda
 role: $inter-font-size-26-600
 color: #ccd6f6
 
+-- ftd.desktop:    
+
 -- ftd.row:
 margin-left.percent: 2
-width.fixed.vw if { ftd.device == "desktop" }: 30
-width.fixed.vw if { ftd.device == "mobile" }: 45
+width.fixed.calc: 100% - 600px
 height.fixed.px: 1
 background.solid: #233554
 
 -- end: ftd.row
+-- end: ftd.desktop
+
+-- ftd.mobile:
+-- ftd.row:
+margin-left.percent: 2
+width.fixed.calc: 100% - 150px
+height.fixed.px: 1
+background.solid: #233554
+
+-- end: ftd.row
+-- end: ftd.mobile
 
 -- end: ftd.row
 ;; end: title and number----------------------------------
@@ -191,6 +203,7 @@ width.fixed.percent if { ftd.device == "mobile" }: 100
 src: $about.cover
 border-radius.px: 8
 shadow: $s-photo
+margin-bottom.px: 100   
 
 -- end: ftd.column
 
@@ -475,7 +488,7 @@ width: auto
 height: auto
 margin-bottom.px: 25
 anchor.id: experience-content-mobile
-top.vh: 8
+top.vh: 9
 id: experience-details-mobile
 
 -- ftd.row:
@@ -548,9 +561,10 @@ color: #8892b0
 width: auto
 height: hug-content
 anchor.id: experience-details-mobile
-top.percent: $experience-paragraph.top-mobile
+top.vh: $experience-paragraph.top-mobile
 left.px: 0
 spacing.fixed.px: 10
+background.solid: #0a192f
 
 -- ftd.image:
 width.fixed.vw: 5
@@ -567,6 +581,28 @@ color: #8892b0
 -- end: ftd.row
 
 -- end: experience-paragraph
+;; ---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+;;-------------------------------------------------work section------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 
 
