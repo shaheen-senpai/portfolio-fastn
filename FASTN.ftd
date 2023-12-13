@@ -1,7 +1,7 @@
 -- import: fastn
 
 -- fastn.package: shaheen-senpai.github.io/portfolio-fastn
-favicon: /-/shaheen-senpai.github.io/portfolio-fastn/favicon.ico
+favicon: /-/shaheen-senpai.github.io/portfolio-fastn/assets/logo.svg
 
 -- fastn.dependency: fastn-community.github.io/doc-site as doc-site
 -- fastn.dependency: fastn-community.github.io/footer

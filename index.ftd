@@ -131,9 +131,9 @@ height: auto
 -- ftd.row:
 width: fill-container
 height: auto
-overflow-x: auto
-css: $assets.files.styles.style.css
-classes: scroller
+overflow-x: scroll
+;; css: $assets.files.styles.style.css
+;; classes: scroller
 
 ;; roles and companies...........................
 -- lib.experience-button:
