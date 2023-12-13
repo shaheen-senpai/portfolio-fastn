@@ -83,10 +83,16 @@ background.solid: #0a192fd9
 shadow: $s 
 
 
+-- ftd.row:
+width: hug-content
+height: fill-container
+link: index.html
+
 -- ftd.image: 
 height: fill-container
 src: $navbar.logo
-link: index.html
+
+-- end: ftd.row
 
 -- ftd.image:
 if: {ftd.device == "mobile"}
