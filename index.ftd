@@ -5,26 +5,125 @@
 -- page:
 
 
-;; hero component
+;; hero component..........................................................
 -- lib.hero:
 name: Shaheen Siddique. N
 title: I love to Code.
 description: I am a passionate and driven student pursuing a BTech degree in computer science, dedicated to gaining hands-on experience and knowledge in various aspects of technology. 
 cta-button-text: Check out my work!
 cta-button-link: index.html
-;; hero end
+;; hero end................................................................
 
 
 
-;; about component
+;; about component.........................................................
 -- lib.about:
 cover: $assets.files.assets.shaheen.jpeg
 para-1: I am a full stack developer with a passion for building beautiful and functional websites and applications.
 para-2: I am a full stack developer with a passion for building beautiful and functional websites and applications.
 para-3: I am a full stack developer with a passion for building beautiful and functional websites and applications.
+;; about end...............................................................
+
+
+
+;; experience component....................................................
+-- lib.experience:
+content-body-height-mobile: 75
+
+
+
+-- lib.experience-button:
+company-name: Trizwit
+
+-- lib.experience-details:
+company-name: Trizwit
+role: Software Developer
+duration: May 2020 - Present
+
+-- lib.experience-details-mobile:
+company-name: Trizwit
+role: Software Developer
+duration: May 2020 - Present
+
+-- lib.experience-paragraph:
+company-name: Trizwit
+para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.
+top: 20
+
+-- lib.experience-paragraph:
+company-name: Trizwit
+para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.
+top: 55
+top-mobile: 65
+
+
+
+
+
+-- lib.experience-button:
+company-name: IEDC Mace
+
+-- lib.experience-details:
+company-name: IEDC Mace
+role: Software Developer
+duration: 2020 - 2021
+
+-- lib.experience-details-mobile:
+company-name: IEDC Mace
+role: Software Developer
+duration: 2020 - 2021
+
+-- lib.experience-paragraph:
+company-name: IEDC Mace
+para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
+top: 20
+
+-- lib.experience-paragraph:
+company-name: IEDC Mace
+para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
+top: 40
+top-mobile: 45
+
+
+
+
+
+
+-- lib.experience-button:
+company-name: AISA Mace
+
+-- lib.experience-details:
+company-name: AISA Mace
+role: Software Developer
+duration: 2020 - 2021
+
+-- lib.experience-details-mobile:
+company-name: AISA Mace
+role: Software Developer
+duration: 2020 - 2021
+
+
+
+
+
+-- end: lib.experience
+;; experience end.........................................................
+
+
+
+
+
+
+
 
 
 -- end: page
+
+
+
+
+
+
 
 
 
@@ -49,7 +148,6 @@ height if {ftd.device == "mobile"}: fill-container
 css: $assets.files.styles.style.css
 classes: body
 
-
 -- ftd.column:
 width: fill-container
 height: fill-container
@@ -57,7 +155,6 @@ height if {ftd.device == "mobile"}: fill-container
 background.solid: #0a192f
 
 ;; start of page
-
 
 
 ;; navbar component
@@ -95,6 +192,7 @@ height: auto
 padding-horizontal.percent: 9
 children: $page.child
 
+;; page content and components...........
 
 -- end: ftd.column
 ;; components end

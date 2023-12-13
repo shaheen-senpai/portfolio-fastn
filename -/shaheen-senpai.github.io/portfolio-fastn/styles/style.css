@@ -2,7 +2,23 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body::-webkit-scrollbar {
-display: none;
+  display: none;
 }
+
+/* Assuming 'scroller' is the class where you want to show the scrollbar */
+.scroller::-webkit-scrollbar {
+  height: 8px; /* Adjust as needed */
+  border-radius: 4px; /* Adjust as needed */
+}
+
+.scroller::-webkit-scrollbar-track {
+  background: #112240; /* Adjust as needed */
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background: #233554; /* Adjust as needed */
+  border-radius: 4px; /* Adjust as needed */
+  width: 3px; /* Do not change */
+}
+
