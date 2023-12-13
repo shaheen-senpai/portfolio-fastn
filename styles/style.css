@@ -8,8 +8,9 @@ body::-webkit-scrollbar {
 
 /* Assuming 'scroller' is the class where you want to show the scrollbar */
 .scroller::-webkit-scrollbar {
-  height: 8px; /* Adjust as needed */
+  display: flex;
   border-radius: 4px; /* Adjust as needed */
+  overflow-x: scroll;
 }
 
 .scroller::-webkit-scrollbar-track {

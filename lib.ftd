@@ -318,49 +318,12 @@ background.solid: #233554
 -- end: ftd.row
 ;; end: title and number----------------------------------
 
-
-;; experience content desktop--------------------------------------
--- ftd.desktop:
--- ftd.row:
-width: fill-container
-height.fixed.vh: 60
-id: experience-content
-
 -- ftd.column:
-width: auto
-height: auto
 children: $experience.c
 
--- end: ftd.column
-
--- end: ftd.row
--- end: ftd.desktop
-;; end: experience content desktop----------------------------------
-
-
-;; experience content mobile--------------------------------------
-
--- ftd.mobile:
--- ftd.column:
-width: fill-container
-min-height.fixed.vh: $experience.content-body-height-mobile
-max-height: hug-content
-id: experience-content-mobile
-
--- ftd.row:
-width: fill-container
-height: auto
-children: $experience.c
-overflow-x: scroll
-css: $assets.files.styles.style.css
-classes: scroller
-
--- end: ftd.row
+;; experience content ------------------------------
 
 -- end: ftd.column
--- end: ftd.mobile
-;; end: experience content mobile----------------------------------
-
 
 ;; end: experience
 -- end: ftd.column
@@ -425,21 +388,18 @@ border-color if { $show-details-company == $experience-button.company-name }: #6
 
 
 
+
 -- component experience-details:
 string company-name:
 string role:
 string duration:
 
--- ftd.desktop:
-
 -- ftd.column:
 if: { $show-details-company == $experience-details.company-name }
 width: auto
 margin-bottom.px: 25
-anchor.id: experience-content
 left.vw if { ftd.device == "desktop" }: 20  
-top.vh if { ftd.device == "mobile" }: 20    
-id: experience-details
+margin-top.px if { ftd.device == "mobile" }: 20    
 
 -- ftd.row:
 margin-bottom.px: 10
@@ -465,58 +425,10 @@ color: #8892b0
 
 -- end: ftd.column
 
--- end: ftd.desktop
-
 -- end: experience-details
 
 
 
-
-
-
-
--- component experience-details-mobile:
-string company-name:
-string role:
-string duration:
-
--- ftd.mobile:
-
--- ftd.column:
-if: { $show-details-company == $experience-details-mobile.company-name }
-width: auto
-height: auto
-margin-bottom.px: 25
-anchor.id: experience-content-mobile
-top.vh: 9
-id: experience-details-mobile
-
--- ftd.row:
-margin-bottom.px: 10
-spacing.fixed.px: 5
-
--- ftd.text: $experience-details-mobile.role
-role: $inter-font-size-20-400
-color: #ccd6f6
-
--- ftd.text: @
-role: $inter-font-size-20-400
-color: #64ffda
-
--- ftd.text: $experience-details-mobile.company-name
-role: $inter-font-size-20-400
-color: #64ffda  
-
--- end: ftd.row
-
--- ftd.text: $experience-details-mobile.duration
-role: $fira-code-size-14-400
-color: #8892b0
-
--- end: ftd.column
--- end: ftd.mobile
-
--- end: experience-details-mobile
 
 
 
@@ -526,20 +438,15 @@ color: #8892b0
 -- component experience-paragraph:
 string company-name:
 string para:
-decimal top:
-optional decimal top-mobile: $experience-paragraph.top
 
 -- ftd.row:
 if: { $show-details-company == $experience-paragraph.company-name }
 
 -- ftd.desktop:
-
 -- ftd.row:
 width: auto
 height: hug-content
-anchor.id: experience-details
 left.vw: 20  
-top.percent: $experience-paragraph.top
 spacing.fixed.px: 10
 
 -- ftd.image:
@@ -551,20 +458,15 @@ role: $inter-font-size-16-400
 color: #8892b0
 
 -- end: ftd.row
-
 -- end: ftd.desktop
 
 
 -- ftd.mobile:
-
 -- ftd.row:
-width: auto
+width: fill-container
 height: hug-content
-anchor.id: experience-details-mobile
-top.vh: $experience-paragraph.top-mobile
-left.px: 0
 spacing.fixed.px: 10
-background.solid: #0a192f
+;; background.solid: #0a192f
 
 -- ftd.image:
 width.fixed.vw: 5
