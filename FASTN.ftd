@@ -1,7 +1,7 @@
 -- import: fastn
 
--- fastn.package: shaheen-senpai.github.io/portfolio-fastn
-favicon: /-/shaheen-senpai.github.io/portfolio-fastn/assets/logo.svg
+-- fastn.package: shaheen-senpai.tech
+favicon: /-/shaheen-senpai.tech/assets/logo.svg
 
 -- fastn.dependency: fastn-community.github.io/doc-site as doc-site
 -- fastn.dependency: fastn-community.github.io/footer
@@ -11,9 +11,9 @@ favicon: /-/shaheen-senpai.github.io/portfolio-fastn/assets/logo.svg
 -- fastn.dependency: shaheen-senpai.github.io/inter-font
 
 
--- fastn.auto-import: shaheen-senpai.github.io/portfolio-fastn/FASTN/ds
--- fastn.auto-import: shaheen-senpai.github.io/portfolio-fastn/assets
--- fastn.auto-import: shaheen-senpai.github.io/portfolio-fastn/lib
+-- fastn.auto-import: shaheen-senpai.tech/FASTN/ds
+-- fastn.auto-import: shaheen-senpai.tech/assets
+-- fastn.auto-import: shaheen-senpai.tech/lib
 -- fastn.auto-import: doc-site
 
 -- fastn.sitemap:

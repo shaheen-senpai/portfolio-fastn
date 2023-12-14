@@ -1,7 +1,7 @@
--- import: shaheen-senpai.github.io/portfolio-fastn/navbar as nb
--- import: shaheen-senpai.github.io/portfolio-fastn/about/lib as al
--- import: shaheen-senpai.github.io/portfolio-fastn/experience/lib as el
--- import: shaheen-senpai.github.io/portfolio-fastn/work/lib as wl
+-- import: shaheen-senpai.tech/navbar as nb
+-- import: shaheen-senpai.tech/about/lib as al
+-- import: shaheen-senpai.tech/experience/lib as el
+-- import: shaheen-senpai.tech/work/lib as wl
 
 
 
