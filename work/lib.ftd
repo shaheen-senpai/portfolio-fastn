@@ -69,7 +69,7 @@ background.solid: #233554
 -- ftd.column:
 width: auto
 height: auto
-spacing.fixed.vh: 5
+spacing.fixed.vh if { ftd.device == "desktop" }: 5
 children: $work.c   
 
 
@@ -95,8 +95,11 @@ string category:
 string title:
 string description:
 string keywords:
-optional string link-github:
-optional string link-project:
+optional string link-github: NONE
+optional string link-project: NONE
+boolean $hover: false
+boolean $hover-github: false
+boolean $hover-project: false
 
 -- ftd.row: 
 width: fill-container
@@ -105,6 +108,7 @@ min-height.fixed.vh: 40
 padding-vertical.vh: 5
 z-index: 1
 
+-- ftd.desktop:
 -- ftd.column:
 width.fixed.percent: 55
 height: hug-content
@@ -136,7 +140,11 @@ margin-bottom.px: 10
 -- ftd.text: $project-hero-1.title
 role: $inter-font-size-28-600
 color: #ccd6f6
+color if { $project-hero-1.hover }: #64ffda
 margin-bottom.px: 20
+$on-mouse-enter$: $ftd.set-bool($a = $project-hero-1.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-hero-1.hover, v = false)
+
 
 -- ftd.text: $project-hero-1.description
 role: $inter-font-size-16-400
@@ -151,7 +159,173 @@ role: $fira-code-size-14-400
 color: #a8b2d1
 margin-bottom.px: 10
 
+
+-- ftd.row:
+width: fill-container
+height.fixed.px: 40
+align-content: right
+;; spacing.fixed.px: 5
+
+
+-- ftd.column:
+if: { $project-hero-1.link-github != "NONE" }
+width: hug-content
+height: fill-container
+padding.px: 10
+$on-mouse-enter$: $ftd.set-bool($a = $project-hero-1.hover-github, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-hero-1.hover-github, v = false)
+open-in-new-tab: true
+link: $project-hero-1.link-github
+
+-- ftd.column:
+if: { !$project-hero-1.hover-github }
+width: hug-content
+height: fill-container
+
+-- ftd.image:
+height: fill-container
+src: $assets.files.assets.github-white.svg
 -- end: ftd.column
+
+-- ftd.column:
+if: { $project-hero-1.hover-github }
+width: hug-content
+height: fill-container
+
+-- ftd.image:
+height: fill-container
+src: $assets.files.assets.github-green.svg
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- ftd.column:
+if: { $project-hero-1.link-project != "NONE" }
+width: hug-content
+height: fill-container
+padding.px: 10
+$on-mouse-enter$: $ftd.set-bool($a = $project-hero-1.hover-project, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-hero-1.hover-project, v = false)
+open-in-new-tab: true
+link: $project-hero-1.link-project
+
+-- ftd.image:
+if: { !$project-hero-1.hover-project }
+height: fill-container
+src: $assets.files.assets.link-external-white.svg
+
+-- ftd.image:
+if: { $project-hero-1.hover-project }
+height: fill-container
+src: $assets.files.assets.link-external-green.svg
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.desktop
+
+
+-- ftd.mobile:
+-- ftd.column:
+width: fill-container
+height: hug-content
+padding.px: 20
+background.solid: #112240
+
+-- ftd.text: $project-hero-1.category
+role: $fira-code-size-14-400
+color: #64ffda
+margin-bottom.px: 10
+
+-- ftd.text: $project-hero-1.title
+role: $inter-font-size-28-600
+color: #ccd6f6
+margin-bottom.px: 20
+
+-- ftd.text: $project-hero-1.description
+role: $inter-font-size-16-400
+color: #a8b2d1
+background.solid: #112240
+margin-bottom.px: 25
+
+-- ftd.text: $project-hero-1.keywords
+role: $fira-code-size-14-400
+color: #a8b2d1
+margin-bottom.px: 10
+
+
+-- ftd.row:
+width: fill-container
+height.fixed.px: 40
+align-content: left
+;; spacing.fixed.px: 5
+
+
+-- ftd.column:
+if: { $project-hero-1.link-github != "NONE" }
+width: hug-content
+height: fill-container
+padding.px: 10
+$on-mouse-enter$: $ftd.set-bool($a = $project-hero-1.hover-github, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-hero-1.hover-github, v = false)
+open-in-new-tab: true
+link: $project-hero-1.link-github
+
+-- ftd.column:
+if: { !$project-hero-1.hover-github }
+width: hug-content
+height: fill-container
+
+-- ftd.image:
+height: fill-container
+src: $assets.files.assets.github-white.svg
+-- end: ftd.column
+
+-- ftd.column:
+if: { $project-hero-1.hover-github }
+width: hug-content
+height: fill-container
+
+-- ftd.image:
+height: fill-container
+src: $assets.files.assets.github-green.svg
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- ftd.column:
+if: { $project-hero-1.link-project != "NONE" }
+width: hug-content
+height: fill-container
+padding.px: 10
+$on-mouse-enter$: $ftd.set-bool($a = $project-hero-1.hover-project, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-hero-1.hover-project, v = false)
+open-in-new-tab: true
+link: $project-hero-1.link-project
+
+-- ftd.image:
+if: { !$project-hero-1.hover-project }
+height: fill-container
+src: $assets.files.assets.link-external-white.svg
+
+-- ftd.image:
+if: { $project-hero-1.hover-project }
+height: fill-container
+src: $assets.files.assets.link-external-green.svg
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+-- end: ftd.column
+
+-- end: ftd.mobile
 
 -- end: ftd.row
 
@@ -171,8 +345,11 @@ string category:
 string title:
 string description:
 string keywords:
-optional string link-github:
-optional string link-project:
+optional string link-github: NONE
+optional string link-project: NONE
+boolean $hover: false
+boolean $hover-github: false
+boolean $hover-project: false
 
 -- ftd.row: 
 width: fill-container
@@ -181,6 +358,8 @@ min-height.fixed.vh: 40
 padding-vertical.vh: 5
 z-index: 1
 align-content: right
+
+-- ftd.desktop:
 
 -- ftd.column:
 width.fixed.percent: 55
@@ -200,6 +379,9 @@ margin-bottom.px: 10
 role: $inter-font-size-28-600
 color: #ccd6f6
 margin-bottom.px: 20
+color if { $project-hero-2.hover }: #64ffda
+$on-mouse-enter$: $ftd.set-bool($a = $project-hero-2.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-hero-2.hover, v = false)
 
 -- ftd.text: $project-hero-2.description
 role: $inter-font-size-16-400
@@ -214,8 +396,73 @@ role: $fira-code-size-14-400
 color: #a8b2d1
 margin-bottom.px: 10
 
+
+-- ftd.row:
+width: fill-container
+height.fixed.px: 40
+align-content: left
+;; spacing.fixed.px: 5
+
+-- ftd.column:
+if: { $project-hero-2.link-github != "NONE" }
+width: hug-content
+height: fill-container
+padding.px: 10
+$on-mouse-enter$: $ftd.set-bool($a = $project-hero-2.hover-github, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-hero-2.hover-github, v = false)
+open-in-new-tab: true
+link: $project-hero-2.link-github
+
+-- ftd.column:
+if: { !$project-hero-2.hover-github }
+width: hug-content
+height: fill-container
+
+-- ftd.image:
+height: fill-container
+src: $assets.files.assets.github-white.svg
+
 -- end: ftd.column
 
+-- ftd.column:
+if: { $project-hero-2.hover-github }
+width: hug-content
+height: fill-container
+
+-- ftd.image:
+height: fill-container
+src: $assets.files.assets.github-green.svg
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- ftd.column:
+if: { $project-hero-2.link-project != "NONE" }
+width: hug-content
+height: fill-container
+padding.px: 10
+$on-mouse-enter$: $ftd.set-bool($a = $project-hero-2.hover-project, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-hero-2.hover-project, v = false)
+open-in-new-tab: true
+link: $project-hero-2.link-project
+
+-- ftd.image:
+if: { !$project-hero-2.hover-project }
+height: fill-container
+src: $assets.files.assets.link-external-white.svg
+
+-- ftd.image:
+if: { $project-hero-2.hover-project }
+height: fill-container
+src: $assets.files.assets.link-external-green.svg
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
 
 -- ftd.column:
 width.fixed.percent: 55
@@ -229,6 +476,107 @@ fit: cover
 src: $project-hero-2.image
 
 -- end: ftd.column
+
+-- end: ftd.desktop
+
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+height: hug-content
+padding.px: 20
+background.solid: #112240
+
+-- ftd.text: $project-hero-2.category
+role: $fira-code-size-14-400
+color: #64ffda
+margin-bottom.px: 10
+
+-- ftd.text: $project-hero-2.title
+role: $inter-font-size-28-600
+color: #ccd6f6
+margin-bottom.px: 20
+
+-- ftd.text: $project-hero-2.description
+role: $inter-font-size-16-400
+color: #a8b2d1
+background.solid: #112240
+margin-bottom.px: 25
+
+-- ftd.text: $project-hero-2.keywords
+role: $fira-code-size-14-400
+color: #a8b2d1
+margin-bottom.px: 10
+
+
+-- ftd.row:
+width: fill-container
+height.fixed.px: 40
+align-content: left
+;; spacing.fixed.px: 5
+
+-- ftd.column:
+if: { $project-hero-2.link-github != "NONE" }
+width: hug-content
+height: fill-container
+padding.px: 10
+$on-mouse-enter$: $ftd.set-bool($a = $project-hero-2.hover-github, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-hero-2.hover-github, v = false)
+open-in-new-tab: true
+link: $project-hero-2.link-github
+
+-- ftd.column:
+if: { !$project-hero-2.hover-github }
+width: hug-content
+height: fill-container
+
+-- ftd.image:
+height: fill-container
+src: $assets.files.assets.github-white.svg
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { $project-hero-2.hover-github }
+width: hug-content
+height: fill-container
+
+-- ftd.image:
+height: fill-container
+src: $assets.files.assets.github-green.svg
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- ftd.column:
+if: { $project-hero-2.link-project != "NONE" }
+width: hug-content
+height: fill-container
+padding.px: 10
+$on-mouse-enter$: $ftd.set-bool($a = $project-hero-2.hover-project, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-hero-2.hover-project, v = false)
+open-in-new-tab: true
+link: $project-hero-2.link-project
+
+-- ftd.image:
+if: { !$project-hero-2.hover-project }
+height: fill-container
+src: $assets.files.assets.link-external-white.svg
+
+-- ftd.image:
+if: { $project-hero-2.hover-project }
+height: fill-container
+src: $assets.files.assets.link-external-green.svg
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
 
 -- end: ftd.row
 
