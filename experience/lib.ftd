@@ -1,0 +1,358 @@
+-- import: shaheen-senpai.github.io/fira-code/assets as fira-code-assets
+-- import: shaheen-senpai.github.io/inter-font/assets as inter-font-assets
+
+
+
+
+
+-- string $show-details-company: Trizwit
+
+
+
+
+
+
+
+
+
+;;----------------------------------------------experience section-------------------------------------------------------
+
+-- component experience:
+children c: 
+
+-- ftd.column:
+width: fill-container
+min-height.fixed.vh: 100
+max-height: hug-content
+padding-horizontal.px if { ftd.device == "desktop" }: 100
+padding-vertical.vh: 10
+align-content: center
+id: experience
+
+
+-- ftd.column:
+width: fill-container
+height: hug-content
+
+
+;; title and number---------------------------------------
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 5
+align-content: left
+margin-bottom.px: 40
+margin-top.px: 10
+
+-- ftd.text: 02\.
+role: $fira-code-size-20-400
+color: #64ffda
+
+-- ftd.text: Where I’ve Worked
+role: $inter-font-size-26-600
+color: #ccd6f6
+
+-- ftd.desktop:    
+
+-- ftd.row:
+margin-left.percent: 2
+width.fixed.calc: 100% - 300px
+height.fixed.px: 1
+background.solid: #233554
+
+-- end: ftd.row
+-- end: ftd.desktop
+
+-- ftd.mobile:
+-- ftd.row:
+margin-left.percent: 2
+width.fixed.calc: 100% - 230px
+height.fixed.px: 1
+background.solid: #233554
+
+-- end: ftd.row
+-- end: ftd.mobile
+
+-- end: ftd.row
+;; end: title and number----------------------------------
+
+-- ftd.column:
+width: auto
+height: auto
+children: $experience.c
+
+;; experience content ------------------------------
+
+-- end: ftd.column
+
+;; end: experience
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: experience
+
+
+
+
+
+
+
+
+
+-- component experience-button:
+string company-name:
+
+-- ftd.row:
+width: auto
+height: hug-content
+
+-- ftd.desktop:
+-- ftd.text: $experience-button.company-name
+width.fixed.vw: 18
+role: $fira-code-size-14-400
+color: #8892b0
+padding-horizontal.px: 20
+padding-vertical.px: 10
+$on-click$: $ftd.set-string($a = $show-details-company, v = $experience-button.company-name)
+background.solid if { $show-details-company == $experience-button.company-name }: #112240
+color if { $show-details-company == $experience-button.company-name }: #64ffda
+border-left-width.px if { $show-details-company == $experience-button.company-name }: 2
+border-color if { $show-details-company == $experience-button.company-name }: #64ffda
+-- end: ftd.desktop
+
+-- ftd.mobile:
+-- ftd.text: $experience-button.company-name
+width.fixed.vw: 35
+min-width: hug-content
+role: $fira-code-size-14-400
+color: #8892b0
+text-align: center
+padding-horizontal.px: 20
+padding-vertical.px: 10
+$on-click$: $ftd.set-string($a = $show-details-company, v = $experience-button.company-name)
+background.solid if { $show-details-company == $experience-button.company-name }: #112240
+color if { $show-details-company == $experience-button.company-name }: #64ffda
+border-top-width.px if { $show-details-company == $experience-button.company-name }: 2
+border-color if { $show-details-company == $experience-button.company-name }: #64ffda
+-- end: ftd.mobile
+
+-- end: ftd.row
+
+-- end: experience-button
+
+
+
+
+
+
+
+
+
+-- component experience-details:
+string company-name:
+string role:
+string duration:
+
+-- ftd.column:
+if: { $show-details-company == $experience-details.company-name }
+width: auto
+margin-bottom.px: 25
+left.vw if { ftd.device == "desktop" }: 20  
+margin-top.px if { ftd.device == "mobile" }: 20    
+
+-- ftd.row:
+margin-bottom.px: 10
+spacing.fixed.px: 5
+
+-- ftd.text: $experience-details.role
+role: $inter-font-size-20-400
+color: #ccd6f6
+
+-- ftd.text: @
+role: $inter-font-size-20-400
+color: #64ffda
+
+-- ftd.text: $experience-details.company-name
+role: $inter-font-size-20-400
+color: #64ffda  
+
+-- end: ftd.row
+
+-- ftd.text: $experience-details.duration
+role: $fira-code-size-14-400
+color: #8892b0
+
+-- end: ftd.column
+
+-- end: experience-details
+
+
+
+
+
+
+
+
+
+-- component experience-paragraph:
+string company-name:
+string para:
+
+-- ftd.row:
+if: { $show-details-company == $experience-paragraph.company-name }
+
+-- ftd.desktop:
+-- ftd.row:
+width: auto
+height: hug-content
+left.vw: 20  
+spacing.fixed.px: 10
+
+-- ftd.image:
+width.fixed.vw: 1
+src: $assets.files.assets.bulletin.svg
+
+-- ftd.text: $experience-paragraph.para
+role: $inter-font-size-16-400
+color: #8892b0
+
+-- end: ftd.row
+-- end: ftd.desktop
+
+
+-- ftd.mobile:
+-- ftd.row:
+width: fill-container
+height: hug-content
+spacing.fixed.px: 10
+;; background.solid: #0a192f
+
+-- ftd.image:
+width.fixed.vw: 5
+src: $assets.files.assets.bulletin.svg
+
+-- ftd.text: $experience-paragraph.para
+role: $inter-font-size-16-400
+color: #8892b0
+
+-- end: ftd.row
+
+-- end: ftd.mobile
+
+-- end: ftd.row
+
+-- end: experience-paragraph
+;; ---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+;;----------------------------------------------------------------------------------------------------------------------
+
+-- ftd.type fira-code-size-16-desktop:
+size.px: 20
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-16-mobile:
+size.px: 16
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-20-400:
+desktop: $fira-code-size-16-desktop
+mobile: $fira-code-size-16-mobile
+
+
+
+
+-- ftd.type inter-font-size-80-desktop:
+size.px: 72
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-40-mobile:
+size.px: 40
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-80-600:
+desktop: $inter-font-size-80-desktop
+mobile: $inter-font-size-40-mobile
+
+
+
+
+-- ftd.type inter-font-size-20-desktop:
+size.px: 20
+weight: 400
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-20-mobile:
+size.px: 16
+weight: 400
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-20-400:
+desktop: $inter-font-size-20-desktop
+mobile: $inter-font-size-20-mobile
+
+
+
+
+-- ftd.type inter-font-size-26-desktop:
+size.px: 26
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-26-mobile:
+size.px: 20
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-26-600:
+desktop: $inter-font-size-26-desktop
+mobile: $inter-font-size-26-mobile
+
+
+
+
+-- ftd.type fira-code-size-14-desktop:
+size.px: 14
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-14-mobile:
+size.px: 16
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-14-400:
+desktop: $fira-code-size-14-desktop
+mobile: $fira-code-size-14-mobile
+
+
+
+
+-- ftd.type inter-font-size-16-desktop:
+size.px: 16
+weight: 400
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-16-mobile:
+size.px: 16
+weight: 400
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-16-400:
+desktop: $inter-font-size-16-desktop
+mobile: $inter-font-size-16-mobile

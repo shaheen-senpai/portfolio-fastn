@@ -1,8 +1,12 @@
 -- import: shaheen-senpai.github.io/portfolio-fastn/navbar as nb
+-- import: shaheen-senpai.github.io/portfolio-fastn/about/lib as al
+-- import: shaheen-senpai.github.io/portfolio-fastn/experience/lib as el
+-- import: shaheen-senpai.github.io/portfolio-fastn/work/lib as wl
 
 
 
 -- page:
+
 
 
 ;; ......................................................hero component..................................................
@@ -16,9 +20,10 @@ cta-button-link: index.html
 
 
 
+
 ;; ........................................................about component................................................
--- lib.about:
-cover: $assets.files.assets.shaheen.jpeg
+-- al.about:
+cover: $assets.files.about.shaheen.jpeg
 para-1: I am a full stack developer with a passion for building beautiful and functional websites and applications.
 para-2: I am a full stack developer with a passion for building beautiful and functional websites and applications.
 para-3: I am a full stack developer with a passion for building beautiful and functional websites and applications.
@@ -26,16 +31,17 @@ para-3: I am a full stack developer with a passion for building beautiful and fu
 
 
 
+
 ;; .......................................................experience component............................................
--- lib.experience:
+-- el.experience:
 
 
 ;; experience content desktop--------------------------------------
 -- ftd.desktop:
 -- ftd.row:
 width: fill-container
-height.fixed.vh: 60
-
+min-height.fixed.vh: 60
+max-height: hug-content
 
 
 ;; roles and companies...........................
@@ -43,18 +49,17 @@ height.fixed.vh: 60
 width: hug-content
 height: auto
 
--- lib.experience-button:
+-- el.experience-button:
 company-name: Trizwit
 
--- lib.experience-button:
+-- el.experience-button:
 company-name: IEDC Mace
 
--- lib.experience-button:
+-- el.experience-button:
 company-name: AISA Mace
 
 -- end: ftd.column
 ;; roles and companies end.......................
-
 
 
 -- ftd.column:
@@ -65,43 +70,48 @@ margin-left.px: 25
 
 
 
--- lib.experience-details:
+-- el.experience-details:
 company-name: Trizwit
 role: Software Developer
 duration: May 2020 - Present
 
--- lib.experience-paragraph:
+-- el.experience-paragraph:
 company-name: Trizwit
 para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis.
 
--- lib.experience-paragraph:
+-- el.experience-paragraph:
 company-name: Trizwit
 para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. 
 
+-- el.experience-paragraph:
+company-name: Trizwit
+para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis.
 
 
--- lib.experience-details:
+
+
+-- el.experience-details:
 company-name: IEDC Mace
 role: Software Developer
 duration: 2020 - 2021
 
--- lib.experience-paragraph:
+-- el.experience-paragraph:
 company-name: IEDC Mace
 para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
 
--- lib.experience-paragraph:
+-- el.experience-paragraph:
 company-name: IEDC Mace
 para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
 
 
 
 
--- lib.experience-details:
+-- el.experience-details:
 company-name: AISA Mace
 role: Software Developer
 duration: 2020 - 2021
 
--- lib.experience-paragraph:
+-- el.experience-paragraph:
 company-name: AISA Mace
 para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
 
@@ -136,13 +146,13 @@ overflow-x: scroll
 ;; classes: scroller
 
 ;; roles and companies...........................
--- lib.experience-button:
+-- el.experience-button:
 company-name: Trizwit
 
--- lib.experience-button:
+-- el.experience-button:
 company-name: IEDC Mace
 
--- lib.experience-button:
+-- el.experience-button:
 company-name: AISA Mace
 
 ;; roles and companies end.......................
@@ -155,41 +165,41 @@ width: fill-container
 height: auto
 spacing.fixed.px: 25
 
--- lib.experience-details:
+-- el.experience-details:
 company-name: Trizwit
 role: Software Developer
 duration: May 2020 - Present
 
--- lib.experience-paragraph:
+-- el.experience-paragraph:
 company-name: Trizwit
 para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis.
 
--- lib.experience-paragraph:
+-- el.experience-paragraph:
 company-name: Trizwit
 para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. 
 
 
--- lib.experience-details:
+-- el.experience-details:
 company-name: IEDC Mace
 role: Software Developer
 duration: 2020 - 2021
 
--- lib.experience-paragraph:
+-- el.experience-paragraph:
 company-name: IEDC Mace
 para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
 
--- lib.experience-paragraph:
+-- el.experience-paragraph:
 company-name: IEDC Mace
 para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
 
 
 
--- lib.experience-details:
+-- el.experience-details:
 company-name: AISA Mace
 role: Software Developer
 duration: 2020 - 2021
 
--- lib.experience-paragraph:
+-- el.experience-paragraph:
 company-name: AISA Mace
 para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa.
 
@@ -203,6 +213,14 @@ para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nis
 ;; end: experience content mobile-----------------------------------------------
 
 
+-- end: el.experience
+;; .......................................................experience end...................................................
+
+
+
+
+;; .......................................................work component...................................................
+-- wl.work:
 
 
 
@@ -212,28 +230,8 @@ para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nis
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- end: lib.experience
-;; experience end.........................................................
-
-
-
-
+-- end: wl.work
+;; .......................................................work end........................................................
 
 
 
@@ -265,15 +263,14 @@ children child:
 
 -- ftd.column:
 width: fill-container
-height if {ftd.device == "desktop"}: fill-container
-height if {ftd.device == "mobile"}: fill-container
+height if {ftd.device == "desktop"}: auto
+height if {ftd.device == "mobile"}: auto
 css: $assets.files.styles.style.css
 classes: body
 
 -- ftd.column:
 width: fill-container
-height: fill-container
-height if {ftd.device == "mobile"}: fill-container
+height: auto
 background.solid: #0a192f
 
 ;; start of page
@@ -310,7 +307,7 @@ cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
 ;; components start
 -- ftd.column:
 width: fill-container
-height: auto
+height: hug-content
 padding-horizontal.percent: 9
 children: $page.child
 

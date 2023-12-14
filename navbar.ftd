@@ -139,6 +139,7 @@ margin-left.px: 20
 $on-mouse-enter$: $ftd.set-bool($a = $navbar.hover-button, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $navbar.hover-button, v = false)
 link: $navbar.cta-button-link
+open-in-new-tab: true 
 shadow if {$navbar.hover-button}: $s-button
 
 -- end: ftd.row
@@ -215,6 +216,7 @@ border-radius.px: 4
 border-color: #64ffda
 align-self: center
 link: $navbar-drop-down.cta-button-link
+open-in-new-tab: true
 
 -- end: ftd.column
 
