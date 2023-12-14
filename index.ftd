@@ -223,12 +223,26 @@ para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nis
 -- wl.work:
 
 
+-- wl.project-hero-1:
+image: $assets.files.work.pro-1.png
+category: Web Development
+title: Trizwit
+description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+keywords: VS Code Sublime Text Atom iTerm2 Hyper
 
+-- wl.project-hero-2:
+image: $assets.files.work.pro-1.png
+category: Web Development
+title: Trizwit
+description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+keywords: VS Code Sublime Text Atom iTerm2 Hyper
 
-
-
-
-
+-- wl.project-hero-1:
+image: $assets.files.work.pro-1.png
+category: Web Development
+title: Trizwit
+description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+keywords: VS Code Sublime Text Atom iTerm2 Hyper
 
 -- end: wl.work
 ;; .......................................................work end........................................................

@@ -69,6 +69,7 @@ background.solid: #233554
 -- ftd.column:
 width: auto
 height: auto
+spacing.fixed.vh: 5
 children: $work.c   
 
 
@@ -79,6 +80,171 @@ children: $work.c
 -- end: ftd.column
 
 -- end: work
+
+
+
+
+
+
+
+
+
+-- component project-hero-1:
+ftd.image-src image:
+string category: 
+string title:
+string description:
+string keywords:
+optional string link-github:
+optional string link-project:
+
+-- ftd.row: 
+width: fill-container
+max-height: hug-content
+min-height.fixed.vh: 40
+padding-vertical.vh: 5
+z-index: 1
+
+-- ftd.column:
+width.fixed.percent: 55
+height: hug-content
+z-index: 10
+
+-- ftd.image:
+width: fill-container
+height: hug-content
+fit: cover
+src: $project-hero-1.image
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 55
+height: hug-content
+anchor: parent
+right.px: 0
+z-index: 20
+align-self: center
+align-content: right
+
+-- ftd.text: $project-hero-1.category
+role: $fira-code-size-14-400
+color: #64ffda
+margin-bottom.px: 10
+
+-- ftd.text: $project-hero-1.title
+role: $inter-font-size-28-600
+color: #ccd6f6
+margin-bottom.px: 20
+
+-- ftd.text: $project-hero-1.description
+role: $inter-font-size-16-400
+color: #a8b2d1
+padding.px: 20
+text-align: end 
+background.solid: #112240
+margin-bottom.px: 25
+
+-- ftd.text: $project-hero-1.keywords
+role: $fira-code-size-14-400
+color: #a8b2d1
+margin-bottom.px: 10
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: project-hero-1
+
+
+
+
+
+
+
+
+
+-- component project-hero-2:
+ftd.image-src image:
+string category: 
+string title:
+string description:
+string keywords:
+optional string link-github:
+optional string link-project:
+
+-- ftd.row: 
+width: fill-container
+max-height: hug-content
+min-height.fixed.vh: 40
+padding-vertical.vh: 5
+z-index: 1
+align-content: right
+
+-- ftd.column:
+width.fixed.percent: 55
+height: hug-content
+z-index: 20
+anchor: parent
+left.px: 0
+align-self: center
+align-content: left
+
+-- ftd.text: $project-hero-2.category
+role: $fira-code-size-14-400
+color: #64ffda
+margin-bottom.px: 10
+
+-- ftd.text: $project-hero-2.title
+role: $inter-font-size-28-600
+color: #ccd6f6
+margin-bottom.px: 20
+
+-- ftd.text: $project-hero-2.description
+role: $inter-font-size-16-400
+color: #a8b2d1
+padding.px: 20
+text-align: start
+background.solid: #112240
+margin-bottom.px: 25
+
+-- ftd.text: $project-hero-2.keywords
+role: $fira-code-size-14-400
+color: #a8b2d1
+margin-bottom.px: 10
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 55
+height: hug-content
+z-index: 10
+
+-- ftd.image:
+width: fill-container
+height: hug-content
+fit: cover
+src: $project-hero-2.image
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: project-hero-2
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -140,17 +306,17 @@ mobile: $inter-font-size-40-mobile
 
 
 -- ftd.type inter-font-size-20-desktop:
-size.px: 20
-weight: 400
+size.px: 28
+weight: 600
 font-family: $inter-font-assets.fonts.Inter
 
 
 -- ftd.type inter-font-size-20-mobile:
-size.px: 16
-weight: 400
+size.px: 24
+weight: 600
 font-family: $inter-font-assets.fonts.Inter
 
--- ftd.responsive-type inter-font-size-20-400:
+-- ftd.responsive-type inter-font-size-28-600:
 desktop: $inter-font-size-20-desktop
 mobile: $inter-font-size-20-mobile
 
