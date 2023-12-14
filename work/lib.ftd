@@ -6,6 +6,20 @@
 
 
 
+;; box shadow specification
+-- ftd.shadow s-box:
+color: #020c1bb3
+x-offset.px: 0
+y-offset.px: 20
+blur.px: 30
+spread.px: -15
+
+
+
+
+
+
+
 
 ;;-------------------------------------------------work section----------------------------------------------------------
 -- component work:
@@ -230,11 +244,13 @@ src: $assets.files.assets.link-external-green.svg
 
 
 -- ftd.mobile:
+
 -- ftd.column:
 width: fill-container
 height: hug-content
 padding.px: 20
 background.solid: #112240
+shadow: $s-box
 
 -- ftd.text: $project-hero-1.category
 role: $fira-code-size-14-400
@@ -487,6 +503,7 @@ width: fill-container
 height: hug-content
 padding.px: 20
 background.solid: #112240
+shadow: $s-box
 
 -- ftd.text: $project-hero-2.category
 role: $fira-code-size-14-400
@@ -577,6 +594,7 @@ src: $assets.files.assets.link-external-green.svg
 
 -- end: ftd.column
 
+-- end: ftd.mobile
 
 -- end: ftd.row
 
