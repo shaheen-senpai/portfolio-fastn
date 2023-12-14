@@ -7,89 +7,78 @@
 
 
 
-;; button shadow specification
--- ftd.shadow s-button:
-color: #64ffda
-x-offset.px: 3
-y-offset.px: 5
-blur.px: 3
-spread.px: 0
-
-;; photo shadow specification
--- ftd.shadow s-photo:
-color: #64ffda80
-x-offset.px: 0
-y-offset.px: 20
-blur.px: 30
-spread.px: -10
-
-
-
-
-;;-----------------------------------------------hero section---------------------------------------------------------
--- component hero:
-string name:
-string title:
-string description:
-string cta-button-text:
-string cta-button-link:
-boolean $hover: false
+;;-------------------------------------------------work section----------------------------------------------------------
+-- component work:
+children c: 
 
 -- ftd.column:
 width: fill-container
-height.fixed.vh: 100
+min-height.fixed.vh: 100
+max-height: hug-content
 padding-horizontal.px if { ftd.device == "desktop" }: 100
 padding-vertical.vh: 10
 align-content: center
+id: work
 
 
 -- ftd.column:
 width: fill-container
 height: hug-content
 
--- ftd.text: Hi, my name is
+
+;; title and number---------------------------------------
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 5
+align-content: left
+margin-bottom.px: 40
+margin-top.px: 10
+
+-- ftd.text: 03\.
 role: $fira-code-size-20-400
 color: #64ffda
-margin-left.px: 4
-margin-bottom.px if { ftd.device == "desktop" }: 30
-margin-bottom.px if { ftd.device == "mobile" }: 20
 
--- ftd.text: $hero.name
-role: $inter-font-size-80-600
+-- ftd.text: Some Things I’ve Built
+role: $inter-font-size-26-600
 color: #ccd6f6
 
--- ftd.text: $hero.title
-role: $inter-font-size-80-600
-color: #8892b0
-margin-top.px: 5
+-- ftd.desktop:    
 
--- ftd.text: $hero.description
-width.fixed.percent if { ftd.device == "desktop" }: 50
-role: $inter-font-size-20-400
-color: #8892b0
-margin-top.px: 20   
-;; text-align: justify 
+-- ftd.row:
+margin-left.percent: 2
+width.fixed.calc: 100% - 350px
+height.fixed.px: 1
+background.solid: #233554
 
--- ftd.text: $hero.cta-button-text
-role: $fira-code-size-20-400
-color: #64ffda
-margin-top.px: 50
-padding-horizontal.px: 28
-padding-vertical.px: 20
-border-radius.px: 4
-border-width.px: 1
-shadow if {$hero.hover}: $s-button
-$on-mouse-enter$: $ftd.set-bool($a = $hero.hover, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $hero.hover, v = false)
-link: $hero.cta-button-link
-open-in-new-tab: true 
+-- end: ftd.row
+-- end: ftd.desktop
+
+-- ftd.mobile:
+-- ftd.row:
+margin-left.percent: 2
+width.fixed.calc: 100% - 255px
+height.fixed.px: 1
+background.solid: #233554
+
+-- end: ftd.row
+-- end: ftd.mobile
+
+-- end: ftd.row
+;; end: title and number----------------------------------
+
+-- ftd.column:
+width: auto
+height: auto
+children: $work.c   
+
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: hero
-;;----------------------------------------------------------------------------------------------------------------------
+-- end: ftd.column
+
+-- end: work
 
 
 
@@ -101,6 +90,8 @@ open-in-new-tab: true
 
 
 
+
+;;-----------------------------------------------work section end-------------------------------------------------------
 
 
 
@@ -216,3 +207,4 @@ font-family: $inter-font-assets.fonts.Inter
 -- ftd.responsive-type inter-font-size-16-400:
 desktop: $inter-font-size-16-desktop
 mobile: $inter-font-size-16-mobile
+

@@ -6,7 +6,6 @@
 
 
 
-
 ;; button shadow specification
 -- ftd.shadow s-button:
 color: #64ffda
@@ -26,86 +25,162 @@ spread.px: -10
 
 
 
-;;-----------------------------------------------hero section---------------------------------------------------------
--- component hero:
-string name:
-string title:
-string description:
-string cta-button-text:
-string cta-button-link:
-boolean $hover: false
+
+
+
+
+;;------------------------------------------------about section--------------------------------------------------------
+-- component about:
+ftd.image-src cover:
+string para-1:
+string para-2:
+string para-3:
 
 -- ftd.column:
 width: fill-container
-height.fixed.vh: 100
+min-height.fixed.vh: 100
+max-height: hug-content
 padding-horizontal.px if { ftd.device == "desktop" }: 100
 padding-vertical.vh: 10
 align-content: center
+id: about
 
 
 -- ftd.column:
 width: fill-container
 height: hug-content
 
--- ftd.text: Hi, my name is
+
+;; title and number---------------------------------------
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 5
+align-content: left
+margin-bottom.px: 40
+margin-top.px: 10
+
+-- ftd.text: 01\.
 role: $fira-code-size-20-400
 color: #64ffda
-margin-left.px: 4
-margin-bottom.px if { ftd.device == "desktop" }: 30
-margin-bottom.px if { ftd.device == "mobile" }: 20
 
--- ftd.text: $hero.name
-role: $inter-font-size-80-600
+-- ftd.text: About Me
+role: $inter-font-size-26-600
 color: #ccd6f6
 
--- ftd.text: $hero.title
-role: $inter-font-size-80-600
-color: #8892b0
-margin-top.px: 5
+-- ftd.desktop:    
 
--- ftd.text: $hero.description
-width.fixed.percent if { ftd.device == "desktop" }: 50
+-- ftd.row:
+margin-left.percent: 2
+width.fixed.calc: 100% - 600px
+height.fixed.px: 1
+background.solid: #233554
+
+-- end: ftd.row
+-- end: ftd.desktop
+
+-- ftd.mobile:
+-- ftd.row:
+margin-left.percent: 2
+width.fixed.calc: 100% - 150px
+height.fixed.px: 1
+background.solid: #233554
+
+-- end: ftd.row
+-- end: ftd.mobile
+
+-- end: ftd.row
+;; end: title and number----------------------------------
+
+
+;; about content desktop----------------------------------
+-- ftd.desktop:
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+spacing: space-between
+
+-- about-content:
+para-1: $about.para-1
+para-2: $about.para-2
+para-3: $about.para-3
+
+-- ftd.image:   
+width.fixed.percent if { ftd.device == "desktop" }: 35
+src: $about.cover
+border-radius.px: 8
+shadow: $s-photo
+
+-- end: ftd.row
+
+-- end: ftd.desktop
+;; end: about content desktop-------------------------------
+
+
+;; about content mobile-------------------------------------
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+height: hug-content
+spacing.fixed.px: 25
+
+-- about-content:
+para-1: $about.para-1
+para-2: $about.para-2
+para-3: $about.para-3
+
+-- ftd.image:
+width.fixed.percent if { ftd.device == "mobile" }: 100
+src: $about.cover
+border-radius.px: 8
+shadow: $s-photo
+;; margin-bottom.px: 10
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+;; end: about content mobile--------------------------------
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: about
+
+
+
+
+
+
+
+
+
+-- component about-content:
+string para-1:
+string para-2:
+string para-3:
+
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 60
+height: hug-content
+
+-- ftd.text: $about-content.para-1
 role: $inter-font-size-20-400
 color: #8892b0
-margin-top.px: 20   
-;; text-align: justify 
 
--- ftd.text: $hero.cta-button-text
-role: $fira-code-size-20-400
-color: #64ffda
-margin-top.px: 50
-padding-horizontal.px: 28
-padding-vertical.px: 20
-border-radius.px: 4
-border-width.px: 1
-shadow if {$hero.hover}: $s-button
-$on-mouse-enter$: $ftd.set-bool($a = $hero.hover, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $hero.hover, v = false)
-link: $hero.cta-button-link
-open-in-new-tab: true 
+-- ftd.text: $about-content.para-2
+role: $inter-font-size-20-400
+color: #8892b0
+
+-- ftd.text: $about-content.para-3
+role: $inter-font-size-20-400
+color: #8892b0
 
 -- end: ftd.column
 
--- end: ftd.column
-
--- end: hero
+-- end: about-content
 ;;----------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
