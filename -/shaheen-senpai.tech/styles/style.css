@@ -6,6 +6,14 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.para {
+  line-height: 1.5rem;
+}
+
+.para1 {
+  line-height: 1.7rem;
+}
+
 .underline-on-hover {
   position: relative;
   display: inline-block;

@@ -41,7 +41,7 @@ height.fixed.vh: 100
 padding-horizontal.px if { ftd.device == "desktop" }: 100
 padding-vertical.vh: 10
 align-content: center
-
+css: $assets.files.styles.style.css
 
 -- ftd.column:
 width: fill-container
@@ -68,7 +68,7 @@ width.fixed.percent if { ftd.device == "desktop" }: 50
 role: $inter-font-size-20-400
 color: #8892b0
 margin-top.px: 20   
-;; text-align: justify 
+classes: para1
 
 -- ftd.text: $hero.cta-button-text
 role: $fira-code-size-20-400
@@ -94,18 +94,211 @@ open-in-new-tab: true
 
 
 
+;;-----------------------------------------------contact section---------------------------------------------------------
+
+-- component contact:
+string email:
+string description:
+boolean $hover: false
+children c: 
+
+-- ftd.column:
+width: fill-container
+min-height.fixed.vh: 85
+max-height: hug-content
+padding-horizontal.px if { ftd.device == "desktop" }: 100
+padding-top.vh: 10
+align-content: top-center
+css: $assets.files.styles.style.css
+id: contact
+
+
+-- ftd.column:
+width: fill-container
+height: auto
+align-content: center
+
+;; title and number---------------------------------------
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-bottom.px: 20
+margin-top.px: 10
+
+-- ftd.text: 04. What’s Next?
+role: $fira-code-size-14-400
+color: #64ffda
+margin-bottom.px: 10
+margin-top.px: 30
+
+-- ftd.text: Get In Touch
+role: $inter-font-size-60-600
+color: #ccd6f6
+
+-- end: ftd.column
+;; end: title and number----------------------------------
+
+
+-- ftd.text: $contact.description
+width.fixed.percent if { ftd.device == "desktop" }: 60
+role: $inter-font-size-16-400
+color: #8892b0
+text-align: center
+margin-bottom.px: 40
+classes: para
+
+-- ftd.text: Say Hello
+role: $fira-code-size-14-400
+color: #64ffda
+padding-horizontal.px: 28
+padding-vertical.px: 20
+border-radius.px: 4
+border-width.px: 1
+shadow if {$contact.hover}: $s-button
+$on-mouse-enter$: $ftd.set-bool($a = $contact.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $contact.hover, v = false)
+link: $contact.email
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+spacing: space-between
+wrap: true
+;; align-content: bottom
+children: $contact.c   
+
+
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: contact
+
+;;----------------------------------------------------------------------------------------------------------------------
 
 
 
 
+;;-----------------------------------------------footer section---------------------------------------------------------
+
+-- component footer:
+optional string instagram: NONE
+optional string github: NONE
+optional string linkedin: NONE
+optional string twitter: NONE
+boolean $hover-1: false
+boolean $hover-2: false
+boolean $hover-instagram: false
+boolean $hover-github: false
+boolean $hover-linkedin: false
+boolean $hover-twitter: false
+
+-- ftd.column:
+width: fill-container
+height: hug-content
+align-content: center
+padding-bottom.vh: 4
+spacing.fixed.px: 5
+
+
+-- ftd.row:
+height.fixed.px: 35
+padding.px: 5
+align-content: center
+spacing.fixed.px: 10
+margin-bottom.px: 5
+padding-left.px: 15
+
+-- ftd.image:
+height.fixed.px: 35
+src: $assets.files.assets.instagram-white.svg
+src if {$footer.hover-instagram}: $assets.files.assets.instagram-green.svg
+$on-mouse-enter$: $ftd.set-bool($a = $footer.hover-instagram, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $footer.hover-instagram, v = false)
+link: $footer.instagram
+open-in-new-tab: true
+
+-- ftd.image:
+height.fixed.px: 35
+src: $assets.files.assets.github-white.svg
+src if {$footer.hover-github}: $assets.files.assets.github-green.svg
+$on-mouse-enter$: $ftd.set-bool($a = $footer.hover-github, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $footer.hover-github, v = false)
+link: $footer.github
+open-in-new-tab: true
+margin-bottom.px: 3
+
+-- ftd.image:
+height.fixed.px: 35
+src: $assets.files.assets.linkedin-white.svg
+src if {$footer.hover-linkedin}: $assets.files.assets.linkedin-green.svg
+$on-mouse-enter$: $ftd.set-bool($a = $footer.hover-linkedin, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $footer.hover-linkedin, v = false)
+link: $footer.linkedin
+open-in-new-tab: true
+margin-horizontal.px: 3 
+margin-bottom.px: 3
+
+-- ftd.image:
+height.fixed.px: 35
+src: $assets.files.assets.twitter-white.svg
+src if {$footer.hover-twitter}: $assets.files.assets.twitter-green.svg
+$on-mouse-enter$: $ftd.set-bool($a = $footer.hover-twitter, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $footer.hover-twitter, v = false)
+link: $footer.twitter
+open-in-new-tab: true   
+margin-top.px: 5
+
+-- end: ftd.row
 
 
 
 
+-- ftd.row:
+spacing.fixed.px: 8
+link: https://www.shaheen-senpai.tech/
+open-in-new-tab: 
 
+-- ftd.text: Made with
+role: $fira-code-size-14-400
+color: #a8b2d1
+color if {$footer.hover-2}: #64ffda
+$on-mouse-enter$: $ftd.set-bool($a = $footer.hover-2, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $footer.hover-2, v = false)
 
+-- ftd.text: fastn
+role: $fira-code-size-14-400
+color: orange
+$on-mouse-enter$: $ftd.set-bool($a = $footer.hover-2, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $footer.hover-2, v = false)
 
+-- ftd.text: by Shaheen
+role: $fira-code-size-14-400
+color: #a8b2d1
+color if {$footer.hover-2}: #64ffda
+$on-mouse-enter$: $ftd.set-bool($a = $footer.hover-2, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $footer.hover-2, v = false)
 
+-- end: ftd.row
+
+-- ftd.text: Adapted from the Brittany Chiang Portfolio
+role: $fira-code-size-14-400
+color: #a8b2d1
+color if {$footer.hover-1}: #64ffda
+text-align: center
+$on-mouse-enter$: $ftd.set-bool($a = $footer.hover-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $footer.hover-1, v = false)
+link: https://github.com/bchiang7/v4
+open-in-new-tab: true
+
+-- end: ftd.column
+
+-- end: footer
+
+;;----------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -216,3 +409,20 @@ font-family: $inter-font-assets.fonts.Inter
 -- ftd.responsive-type inter-font-size-16-400:
 desktop: $inter-font-size-16-desktop
 mobile: $inter-font-size-16-mobile
+
+
+
+-- ftd.type inter-font-size-60-desktop:
+size.px: 60
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-60-mobile:
+size.px: 50
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-60-600:
+desktop: $inter-font-size-60-desktop
+mobile: $inter-font-size-60-mobile
