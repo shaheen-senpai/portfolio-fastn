@@ -1,0 +1,353 @@
+-- import: shaheen-senpai.github.io/fira-code/assets as fira-code-assets
+-- import: shaheen-senpai.github.io/inter-font/assets as inter-font-assets
+
+
+
+
+
+
+;; box shadow specification
+-- ftd.shadow s-box:
+color: #020c1bb3
+x-offset.px: 0
+y-offset.px: 20
+blur.px: 30
+spread.px: -15
+
+;; button shadow specification
+-- ftd.shadow s-button:
+color: #64ffda
+x-offset.px: 3
+y-offset.px: 5
+blur.px: 3
+spread.px: 0
+
+
+
+
+
+
+;;-------------------------------------------------project section----------------------------------------------------------
+
+-- component project:
+boolean $hover: false
+children c: 
+
+-- ftd.column:
+width: fill-container
+min-height.fixed.vh: 100
+max-height: hug-content
+padding-horizontal.px if { ftd.device == "desktop" }: 50
+padding-vertical.vh: 10
+align-content: center
+id: project
+
+
+-- ftd.column:
+width: fill-container
+height: hug-content
+align-content: center
+
+;; title and number---------------------------------------
+-- ftd.column:
+width: fill-container
+spacing.fixed.vh: 2
+align-content: center
+margin-bottom.px: 40
+margin-top.px: 10
+
+-- ftd.text: Other Noteworthy Projects
+role: $inter-font-size-26-600
+color: #ccd6f6
+
+-- ftd.text: view the archive
+role: $fira-code-size-14-400
+color: #64ffda
+css: $assets.files.styles.style.css
+classes: underline-on-hover
+link: /projects/index.html
+
+-- end: ftd.column
+;; end: title and number----------------------------------
+
+-- ftd.row:
+width: auto
+height: auto
+spacing.fixed.px: 20
+wrap: true
+align-content: center
+children: $project.c   
+
+
+-- end: ftd.row
+
+
+-- ftd.text: Show More
+role: $fira-code-size-14-400
+color: #64ffda
+margin-top.px if { ftd.device == "mobile" }: 50
+margin-top.px if { ftd.device == "desktop" }: 100
+padding-horizontal.px: 28
+padding-vertical.px: 20
+border-radius.px: 4
+border-width.px: 1
+shadow if {$project.hover}: $s-button
+$on-mouse-enter$: $ftd.set-bool($a = $project.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project.hover, v = false)
+link: /projects/index.html
+open-in-new-tab: true 
+
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: project
+
+
+
+
+
+
+
+
+
+-- component project-card:
+;; string category: 
+string title:
+string description:
+string keywords:
+optional string link-github: NONE
+optional string link-project: NONE
+optional boolean $hover: false
+boolean $hover-github: false
+boolean $hover-project: false
+
+-- ftd.column:
+width.fixed.px if { ftd.device == "desktop" }: 350
+width if { ftd.device == "mobile" }: fill-container
+min-height.fixed.px: 350
+max-height: hug-content
+padding.px: 20
+background.solid: #112240
+spacing: space-between
+shadow: $s-box
+
+
+-- ftd.column:
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+align-content: center
+margin-bottom.px: 10
+
+-- ftd.image:
+src: $assets.files.assets.folder.svg
+
+-- ftd.row:
+
+-- ftd.column:
+if: { $project-card.link-github != "NONE" }
+width: hug-content
+height.fixed.px: 40
+padding.px: 10
+$on-mouse-enter$: $ftd.set-bool($a = $project-card.hover-github, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-card.hover-github, v = false)
+open-in-new-tab: true
+link: $project-card.link-github
+
+-- ftd.column:
+if: { !$project-card.hover-github }
+width: hug-content
+height: fill-container
+
+-- ftd.image:
+height: fill-container
+src: $assets.files.assets.github-white.svg
+-- end: ftd.column
+
+-- ftd.column:
+if: { $project-card.hover-github }
+width: hug-content
+height: fill-container
+
+-- ftd.image:
+height: fill-container
+src: $assets.files.assets.github-green.svg
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- ftd.column:
+if: { $project-card.link-project != "NONE" }
+width: hug-content
+height.fixed.px: 40
+padding.px: 10
+$on-mouse-enter$: $ftd.set-bool($a = $project-card.hover-project, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-card.hover-project, v = false)
+open-in-new-tab: true
+link: $project-card.link-project
+
+-- ftd.image:
+if: { !$project-card.hover-project }
+height: fill-container
+src: $assets.files.assets.link-external-white.svg
+
+-- ftd.image:
+if: { $project-card.hover-project }
+height: fill-container
+src: $assets.files.assets.link-external-green.svg
+
+-- end: ftd.column
+
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+
+-- ftd.text: $project-card.title
+role: $inter-font-size-28-600
+color: #ccd6f6
+color if { $project-card.hover }: #64ffda
+margin-bottom.px: 20
+$on-mouse-enter$: $ftd.set-bool($a = $project-card.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-card.hover, v = false)
+classes: underline-on-hover
+
+-- ftd.text: $project-card.description
+role: $inter-font-size-16-400
+color: #a8b2d1
+
+-- end: ftd.column
+
+
+-- ftd.text: $project-card.keywords
+role: $fira-code-size-14-400
+color: #a8b2d1
+
+-- end: ftd.column
+
+-- end: project-card
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;----------------------------------------------------------------------------------------------------------------------
+
+-- ftd.type fira-code-size-16-desktop:
+size.px: 20
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-16-mobile:
+size.px: 16
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-20-400:
+desktop: $fira-code-size-16-desktop
+mobile: $fira-code-size-16-mobile
+
+
+
+
+-- ftd.type inter-font-size-80-desktop:
+size.px: 72
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-40-mobile:
+size.px: 40
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-80-600:
+desktop: $inter-font-size-80-desktop
+mobile: $inter-font-size-40-mobile
+
+
+
+
+-- ftd.type inter-font-size-20-desktop:
+size.px: 28
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-20-mobile:
+size.px: 24
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-28-600:
+desktop: $inter-font-size-20-desktop
+mobile: $inter-font-size-20-mobile
+
+
+
+
+-- ftd.type inter-font-size-26-desktop:
+size.px: 26
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-26-mobile:
+size.px: 20
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-26-600:
+desktop: $inter-font-size-26-desktop
+mobile: $inter-font-size-26-mobile
+
+
+
+
+-- ftd.type fira-code-size-14-desktop:
+size.px: 14
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-14-mobile:
+size.px: 16
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-14-400:
+desktop: $fira-code-size-14-desktop
+mobile: $fira-code-size-14-mobile
+
+
+
+
+-- ftd.type inter-font-size-16-desktop:
+size.px: 16
+weight: 400
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-16-mobile:
+size.px: 16
+weight: 400
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-16-400:
+desktop: $inter-font-size-16-desktop
+mobile: $inter-font-size-16-mobile

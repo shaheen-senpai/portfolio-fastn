@@ -6,6 +6,38 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.underline-on-hover {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #64ffda;
+  font-size: 1.5rem;
+  font-weight: 400;
+  /* margin: 0 1rem; */
+  /* padding: 0.5rem 0; */
+  transition: all 0.3s ease 0s;
+}
+
+.underline-on-hover:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 0.1rem;
+  left: 50%;
+  position: absolute;
+  background: #64ffda;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.underline-on-hover:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+
+
 /* Assuming 'scroller' is the class where you want to show the scrollbar */
 .scroller::-webkit-scrollbar {
   display: flex;
