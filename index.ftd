@@ -299,16 +299,21 @@ link-project: NONE dgb
 
 
 -- end: pl.project
-
 ;; .......................................................project end.....................................................
 
 
 
 
+;; .......................................................contact component................................................
+-- lib.contact:
+email: mailto:shaheen50053@gmail.com
+description: Feel free to reach out to me for any queries or suggestions, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+
+-- end: lib.contact
+;; .......................................................contact end.....................................................
 
 
-
-
+-- lib.footer:
 
 
 -- end: page
