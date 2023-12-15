@@ -2,6 +2,7 @@
 -- import: shaheen-senpai.tech/about/lib as al
 -- import: shaheen-senpai.tech/experience/lib as el
 -- import: shaheen-senpai.tech/work/lib as wl
+-- import: shaheen-senpai.tech/projects/lib as pl
 
 
 
@@ -239,7 +240,7 @@ category: Web Development
 title: Trizwit
 description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
 keywords: VS Code Sublime Text Atom iTerm2 Hyper
-link-github: NONE cancel
+link-github: NONE
 link-project: NONE cancel
 
 -- wl.project-hero-1:
@@ -249,10 +250,62 @@ title: Trizwit
 description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
 keywords: VS Code Sublime Text Atom iTerm2 Hyper
 link-github: NONE cancel
-link-project: NONE cancel
+link-project: NONE
 
 -- end: wl.work
 ;; .......................................................work end........................................................
+
+
+
+
+
+;; .......................................................project component................................................
+-- pl.project:
+
+-- pl.project-card:
+title: Trizwit
+description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+keywords: VS Code Sublime Text Atom iTerm2 Hyper
+link-github: NONE cancel
+link-project: NONE dgb
+
+-- pl.project-card:
+title: Trizwit
+description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+keywords: VS Code Sublime Text Atom iTerm2 Hyper
+link-github: NONE cancel
+link-project: NONE dgb
+
+-- pl.project-card:
+title: Trizwit
+description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+keywords: VS Code Sublime Text Atom iTerm2 Hyper
+link-github: NONE cancel
+link-project: NONE dgb
+
+-- pl.project-card:
+title: Trizwit
+description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+keywords: VS Code Sublime Text Atom iTerm2 Hyper
+link-github: NONE cancel
+link-project: NONE dgb
+
+-- pl.project-card:
+title: Trizwit
+description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+keywords: VS Code Sublime Text Atom iTerm2 Hyper
+link-github: NONE cancel
+link-project: NONE dgb
+
+
+-- end: pl.project
+
+;; .......................................................project end.....................................................
+
+
+
+
+
 
 
 

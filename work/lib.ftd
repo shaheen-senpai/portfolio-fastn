@@ -38,7 +38,7 @@ id: work
 -- ftd.column:
 width: fill-container
 height: hug-content
-
+css: $assets.files.styles.style.css
 
 ;; title and number---------------------------------------
 -- ftd.row:
@@ -158,6 +158,7 @@ color if { $project-hero-1.hover }: #64ffda
 margin-bottom.px: 20
 $on-mouse-enter$: $ftd.set-bool($a = $project-hero-1.hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $project-hero-1.hover, v = false)
+classes: underline-on-hover
 
 
 -- ftd.text: $project-hero-1.description
@@ -398,6 +399,7 @@ margin-bottom.px: 20
 color if { $project-hero-2.hover }: #64ffda
 $on-mouse-enter$: $ftd.set-bool($a = $project-hero-2.hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $project-hero-2.hover, v = false)
+classes: underline-on-hover
 
 -- ftd.text: $project-hero-2.description
 role: $inter-font-size-16-400
