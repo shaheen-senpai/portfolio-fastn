@@ -140,7 +140,7 @@ min-height.fixed.vh: 70
 height: auto
 
 -- ftd.row:
-width: fill-container
+width.fixed.vw: 80  
 height: auto
 overflow-x: scroll
 ;; css: $assets.files.styles.style.css
@@ -162,7 +162,7 @@ company-name: AISA Mace
 
 
 -- ftd.column:
-width: fill-container
+width.fixed.vw: 80
 height: auto
 spacing.fixed.px: 25
 
