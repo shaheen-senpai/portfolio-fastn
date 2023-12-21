@@ -221,6 +221,7 @@ classes: underline-on-hover
 -- ftd.text: $project-card.description
 role: $inter-font-size-16-400
 color: #a8b2d1
+classes: para
 
 -- end: ftd.column
 

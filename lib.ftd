@@ -42,6 +42,7 @@ padding-horizontal.px if { ftd.device == "desktop" }: 100
 padding-vertical.vh: 10
 align-content: center
 css: $assets.files.styles.style.css
+id: hero
 
 -- ftd.column:
 width: fill-container

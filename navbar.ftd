@@ -87,7 +87,7 @@ shadow: $s
 -- ftd.row:
 width: hug-content
 height: fill-container
-link: index.html
+link: /#hero
 
 -- ftd.image: 
 height: fill-container
