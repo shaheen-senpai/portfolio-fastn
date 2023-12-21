@@ -168,6 +168,7 @@ padding.px: 20
 text-align: end 
 background.solid: #112240
 margin-bottom.px: 25
+classes: para
 
 -- ftd.text: $project-hero-1.keywords
 role: $fira-code-size-14-400
@@ -268,6 +269,7 @@ role: $inter-font-size-16-400
 color: #a8b2d1
 background.solid: #112240
 margin-bottom.px: 25
+classes: para
 
 -- ftd.text: $project-hero-1.keywords
 role: $fira-code-size-14-400
@@ -408,6 +410,7 @@ padding.px: 20
 text-align: start
 background.solid: #112240
 margin-bottom.px: 25
+classes: para
 
 -- ftd.text: $project-hero-2.keywords
 role: $fira-code-size-14-400
@@ -522,6 +525,7 @@ role: $inter-font-size-16-400
 color: #a8b2d1
 background.solid: #112240
 margin-bottom.px: 25
+classes: para
 
 -- ftd.text: $project-hero-2.keywords
 role: $fira-code-size-14-400

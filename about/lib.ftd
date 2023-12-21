@@ -32,9 +32,7 @@ spread.px: -10
 ;;------------------------------------------------about section--------------------------------------------------------
 -- component about:
 ftd.image-src cover:
-string para-1:
-string para-2:
-string para-3:
+children c:
 
 -- ftd.column:
 width: fill-container
@@ -100,16 +98,21 @@ width: fill-container
 height: hug-content
 spacing: space-between
 
--- about-content:
-para-1: $about.para-1
-para-2: $about.para-2
-para-3: $about.para-3
+-- ftd.column:
+width.fixed.percent if { ftd.device == "desktop" }: 60
+height: hug-content
+children: $about.c
+
+;; about-content:
+
+-- end: ftd.column
 
 -- ftd.image:   
 width.fixed.percent if { ftd.device == "desktop" }: 35
 src: $about.cover
 border-radius.px: 8
 shadow: $s-photo
+align-self: center
 
 -- end: ftd.row
 
@@ -125,10 +128,14 @@ width: fill-container
 height: hug-content
 spacing.fixed.px: 25
 
--- about-content:
-para-1: $about.para-1
-para-2: $about.para-2
-para-3: $about.para-3
+-- ftd.column:
+width: fill-container
+height: hug-content
+children: $about.c
+
+;; about-content:
+
+-- end: ftd.column
 
 -- ftd.image:
 width.fixed.percent if { ftd.device == "mobile" }: 100
@@ -160,26 +167,68 @@ shadow: $s-photo
 string para-1:
 string para-2:
 string para-3:
+optional string skills-text: My tech mojo and wizardry include :
 
 -- ftd.column:
-width.fixed.percent if { ftd.device == "desktop" }: 60
+width: fill-container
 height: hug-content
+spacing.fixed.px: 25
 
 -- ftd.text: $about-content.para-1
-role: $inter-font-size-20-400
+role: $inter-font-size-16-400
 color: #8892b0
+classes: para
 
 -- ftd.text: $about-content.para-2
-role: $inter-font-size-20-400
+role: $inter-font-size-16-400
 color: #8892b0
+classes: para
 
 -- ftd.text: $about-content.para-3
-role: $inter-font-size-20-400
+role: $inter-font-size-16-400
 color: #8892b0
+classes: para
+
+-- ftd.text: $about-content.skills-text
+role: $inter-font-size-16-400
+color: #8892b0
+margin-top.px: 15
+margin-bottom.px: 10
 
 -- end: ftd.column
 
 -- end: about-content
+
+
+
+
+
+
+
+
+
+-- component about-skill:
+string skill-name:
+string color:
+
+-- ftd.row:
+min-width.fixed.percent if { ftd.device == "desktop"}: 30
+min-width.fixed.percent if { ftd.device == "mobile"}: 45
+max-width: hug-content
+height: hug-content
+spacing.fixed.px: 10
+align-content: left
+
+-- ftd.image:
+width.fixed.px: 20
+src: $assets.files.assets.bulletin.svg
+
+-- ftd.text: $about-skill.skill-name
+role: $inter-font-size-16-400
+color: $about-skill.color
+
+-- end: ftd.row
+-- end: about-skill
 ;;----------------------------------------------------------------------------------------------------------------------
 
 
