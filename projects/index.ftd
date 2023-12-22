@@ -1,0 +1,198 @@
+-- import: shaheen-senpai.github.io/fira-code/assets as fira-code-assets
+-- import: shaheen-senpai.github.io/inter-font/assets as inter-font-assets
+-- import: shaheen-senpai.tech/navbar as nb
+-- import: shaheen-senpai.tech/projects/lib as pl
+
+
+
+-- page:
+
+-- pl.project-tile-head:
+year: Year
+title: Title
+place: Made At
+Tech: Built with
+link: Link
+
+
+
+-- pl.project-tile:
+
+-- pl.project-tile:
+
+-- pl.project-tile:
+
+-- pl.project-tile:
+
+-- pl.project-tile:
+
+-- pl.project-tile:
+
+
+
+;;.........................................................................................................................
+-- lib.footer:
+top-margin: 10
+instagram: https://www.instagram.com/shaheen.____/
+github: https://github.com/shaheen-senpai
+linkedin: https://www.linkedin.com/in/shaheen-siddique-n
+twitter: https://twitter.com/SHAHEEN67385984
+
+-- end: page
+;;-------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+;;-------------------------------------------------------page definition----------------------------------------------------
+-- component page:
+children child:
+
+-- ftd.column:
+width: fill-container
+height if {ftd.device == "desktop"}: auto
+height if {ftd.device == "mobile"}: auto
+css: $assets.files.styles.style.css
+classes: body
+
+-- ftd.column:
+width: fill-container
+height: auto
+background.solid: #0a192f
+
+;; start of page
+
+
+;; navbar component
+-- nb.navbar: 
+logo: $assets.files.assets.logo.svg
+cta-text-1: About
+cta-text-2: Experience
+cta-text-3: Work
+cta-text-4: Contact
+cta-link-1: /#about
+cta-link-2: /#experience
+cta-link-3: /#work
+cta-link-4: /#contact
+cta-button-text: Resume
+cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
+
+-- nb.navbar-drop-down:
+cta-text-1: About
+cta-text-2: Experience
+cta-text-3: Work
+cta-text-4: Contact
+cta-link-1: index.html#about
+cta-link-2: index.html#experience
+cta-link-3: index.html#work
+cta-link-4: index.html#contact
+cta-button-text: Resume
+cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
+;; navbar end
+
+
+-- ftd.column:
+width: fill-container
+height: auto    
+padding-horizontal.percent: 9
+padding-top.vh: 10
+padding-bottom.vh: 5
+
+-- ftd.text: Archive
+role: $inter-font-size-80-600
+color: #ccd6f6
+margin-top.px: 15
+margin-bottom.px: 15
+
+-- ftd.text: A big list of things I’ve worked on
+role: $fira-code-size-16-400
+color: #64ffda
+
+-- end: ftd.column
+
+
+
+;; components start
+-- ftd.column:
+width: fill-container
+min-height.fixed.vh: 40
+max-height: hug-content
+padding-horizontal.percent: 9
+children: $page.child
+
+;; page content and components...........
+
+-- end: ftd.column
+;; components end
+
+
+;; end of page
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page
+
+;;-------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+;;-------------------------------------------------------font definition----------------------------------------------------
+-- ftd.type inter-font-size-16-desktop:
+size.px: 16
+weight: 400
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-16-mobile:
+size.px: 16
+weight: 400
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-16-400:
+desktop: $inter-font-size-16-desktop
+mobile: $inter-font-size-16-mobile
+
+
+
+
+-- ftd.type inter-font-size-80-desktop:
+size.px: 72
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-40-mobile:
+size.px: 40
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-80-600:
+desktop: $inter-font-size-80-desktop
+mobile: $inter-font-size-40-mobile
+
+
+
+
+-- ftd.type fira-code-size-16-desktop:
+size.px: 16
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-16-mobile:
+size.px: 16
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-16-400:
+desktop: $fira-code-size-16-desktop
+mobile: $fira-code-size-16-mobile

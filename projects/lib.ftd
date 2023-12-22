@@ -65,7 +65,7 @@ role: $fira-code-size-14-400
 color: #64ffda
 css: $assets.files.styles.style.css
 classes: underline-on-hover
-link: /projects/index.html
+link: /projects/
 
 -- end: ftd.column
 ;; end: title and number----------------------------------
@@ -94,7 +94,7 @@ border-width.px: 1
 shadow if {$project.hover}: $s-button
 $on-mouse-enter$: $ftd.set-bool($a = $project.hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $project.hover, v = false)
-link: /projects/index.html
+link: /projects/
 open-in-new-tab: true 
 
 
@@ -242,6 +242,130 @@ color: #a8b2d1
 
 
 
+-- component project-tile-head:
+optional string year: Year
+optional string title: Title
+optional string place: Made At
+optional string Tech: Built with
+optional string link: Link
+
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+margin-bottom.px: 15
+
+-- ftd.text: $project-tile-head.year
+role: $inter-font-size-18-600
+color: #8892b0
+padding.px: 10
+min-width.fixed.percent: 5
+max-width: hug-content
+text-align: center
+
+-- ftd.text: $project-tile-head.title
+role: $inter-font-size-18-600
+color: #8892b0
+padding.px: 10
+width.fixed.percent if { ftd.device == "desktop" }: 35
+width.fixed.percent if { ftd.device == "mobile" }: 60
+
+-- ftd.desktop:
+-- ftd.text: $project-tile-head.place
+role: $inter-font-size-18-600
+color: #8892b0
+padding.px: 10
+width.fixed.percent: 17
+
+-- ftd.text: $project-tile-head.Tech
+role: $inter-font-size-18-600
+color: #8892b0
+padding.px: 10
+width.fixed.percent: 35
+-- end: ftd.desktop
+
+-- ftd.text: $project-tile-head.link
+role: $inter-font-size-18-600
+color: #8892b0
+padding.px: 10
+min-width.fixed.percent: 8
+max-width: hug-content
+
+-- end: ftd.row
+
+-- end: project-tile-head
+
+
+
+
+
+
+
+
+
+
+-- component project-tile:
+optional string year: 2023
+optional string title: Fastn UI Components Library
+optional string place: Trizwit
+optional string Tech: React, TypeScript, Storybook
+optional string link: NONE
+optional string link-github: NONE
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+margin-bottom.px: 5
+
+-- ftd.text: $project-tile.year
+role: $fira-code-size-14-400
+color: #64ffda
+padding.px: 10
+min-width.fixed.percent: 5
+max-width: hug-content
+text-align: center
+
+-- ftd.text: $project-tile.title
+role: $inter-font-size-18-600
+color: #ccd6f6
+padding.px: 10
+width.fixed.percent if { ftd.device == "desktop" }: 35
+width.fixed.percent if { ftd.device == "mobile" }: 60
+
+-- ftd.desktop:
+-- ftd.text: $project-tile.place
+role: $inter-font-size-16-400
+color: #8892b0
+padding.px: 10
+width.fixed.percent: 17
+align-self: center
+
+-- ftd.text: $project-tile.Tech
+role: $inter-font-size-16-400
+color: #8892b0
+padding.px: 10
+width.fixed.percent: 35
+align-self: center
+-- end: ftd.desktop
+
+
+
+
+
+
+
+
+
+
+-- end: ftd.row
+
+-- end: project-tile
+
+
+
+
+
+
 
 
 
@@ -284,20 +408,20 @@ mobile: $inter-font-size-40-mobile
 
 
 
--- ftd.type inter-font-size-20-desktop:
+-- ftd.type inter-font-size-28-desktop:
 size.px: 28
 weight: 600
 font-family: $inter-font-assets.fonts.Inter
 
 
--- ftd.type inter-font-size-20-mobile:
+-- ftd.type inter-font-size-28-mobile:
 size.px: 24
 weight: 600
 font-family: $inter-font-assets.fonts.Inter
 
 -- ftd.responsive-type inter-font-size-28-600:
-desktop: $inter-font-size-20-desktop
-mobile: $inter-font-size-20-mobile
+desktop: $inter-font-size-28-desktop
+mobile: $inter-font-size-28-mobile
 
 
 
@@ -352,3 +476,39 @@ font-family: $inter-font-assets.fonts.Inter
 -- ftd.responsive-type inter-font-size-16-400:
 desktop: $inter-font-size-16-desktop
 mobile: $inter-font-size-16-mobile
+
+
+
+
+-- ftd.type inter-font-size-18-desktop:
+size.px: 18
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+
+-- ftd.type inter-font-size-18-mobile:
+size.px: 18
+weight: 600
+font-family: $inter-font-assets.fonts.Inter
+
+-- ftd.responsive-type inter-font-size-18-600:
+desktop: $inter-font-size-18-desktop
+mobile: $inter-font-size-18-mobile
+
+
+
+
+-- ftd.type fira-code-size-16-desktop:
+size.px: 16
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-16-mobile:
+size.px: 16
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-16-400:
+desktop: $fira-code-size-16-desktop
+mobile: $fira-code-size-16-mobile
