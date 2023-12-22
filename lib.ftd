@@ -196,6 +196,7 @@ boolean $hover-instagram: false
 boolean $hover-github: false
 boolean $hover-linkedin: false
 boolean $hover-twitter: false
+optional decimal top-margin: 0
 
 -- ftd.column:
 width: fill-container
@@ -203,7 +204,7 @@ height: hug-content
 align-content: center
 padding-bottom.vh: 4
 spacing.fixed.px: 5
-
+margin-top.vh: $footer.top-margin
 
 -- ftd.row:
 height.fixed.px: 35
