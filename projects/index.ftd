@@ -18,11 +18,24 @@ link: Link
 
 -- pl.project-tile:
 
--- pl.project-tile:
 
 -- pl.project-tile:
 
 -- pl.project-tile:
+year: 2021
+title: Portfolio
+place: Personal
+Tech: HTML, CSS, JS
+link: https://shaheen-senpai.github.io/shaheen-senpai.github.io/
+link-github: https://github.com/shaheen-senpai
+
+-- pl.project-tile:
+year: 2021
+title: Flix
+place: Personal
+Tech: HTML, CSS, JS
+link: https://shaheen-senpai.github.io/flix/
+link-github: 
 
 -- pl.project-tile:
 

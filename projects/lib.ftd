@@ -311,11 +311,17 @@ optional string place: Trizwit
 optional string Tech: React, TypeScript, Storybook
 optional string link: NONE
 optional string link-github: NONE
+boolean $hover-link: false
+boolean $hover-github: false
+boolean $hover: false
 
 -- ftd.row:
 width: fill-container
 height: hug-content
 margin-bottom.px: 5
+background.solid if { $project-tile.hover }: #112240
+$on-mouse-enter$: $ftd.set-bool($a = $project-tile.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-tile.hover, v = false)
 
 -- ftd.text: $project-tile.year
 role: $fira-code-size-14-400
@@ -349,12 +355,36 @@ align-self: center
 -- end: ftd.desktop
 
 
+-- ftd.row:
+width: fill-container
+height: auto
+padding.px: 10
+min-width.fixed.percent: 8
+max-width: hug-content
+spacing.fixed.px: 15
+
+-- ftd.image:
+if: { $project-tile.link != "NONE" }
+height.fixed.px: 20
+src: $assets.files.assets.link-external-white.svg
+src if { $project-tile.hover-link }: $assets.files.assets.link-external-green.svg
+$on-mouse-enter$: $ftd.set-bool($a = $project-tile.hover-link, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-tile.hover-link, v = false)
+open-in-new-tab: true
+link: $project-tile.link
+
+-- ftd.image:
+if: { $project-tile.link-github != "NONE" }
+height.fixed.px: 20
+src: $assets.files.assets.github-white.svg
+src if { $project-tile.hover-github }: $assets.files.assets.github-green.svg
+$on-mouse-enter$: $ftd.set-bool($a = $project-tile.hover-github, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $project-tile.hover-github, v = false)
+open-in-new-tab: true
+link: $project-tile.link-github
 
 
-
-
-
-
+-- end: ftd.row
 
 
 -- end: ftd.row
