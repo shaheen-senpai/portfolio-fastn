@@ -101,10 +101,10 @@ cta-text-1: About
 cta-text-2: Experience
 cta-text-3: Work
 cta-text-4: Contact
-cta-link-1: index.html#about
-cta-link-2: index.html#experience
-cta-link-3: index.html#work
-cta-link-4: index.html#contact
+cta-link-1: /#about
+cta-link-2: /#experience
+cta-link-3: /#work
+cta-link-4: /#contact
 cta-button-text: Resume
 cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
 ;; navbar end
