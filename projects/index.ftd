@@ -16,30 +16,97 @@ link: Link
 
 
 
--- pl.project-tile:
+;; start of page content-------------------------------------------------------------------------------------------------------------
 
 
--- pl.project-tile:
+;; -- pl.project-tile:
+;; year: 
+;; title: 
+;; place: 
+;; Tech: 
+;; link: 
+;; link-github:
+
+
+
+
+
+;; -- pl.project-tile:
+;; year: 
+;; title: 
+;; place: 
+;; Tech: 
+;; link: 
+;; link-github:
 
 -- pl.project-tile:
-year: 2021
-title: Portfolio
+year: 2024
+title: NewsAI
+place: Academic
+Tech: Gemini GPT-3.5 FastAPI Next.js TailwindCSS Beautiful-Soup SiameseBERT
+;; link:
+link-github: Gemini GPT-3.5 FastAPI Next.js TailwindCSS Beautiful-Soup SiameseBERT
+
+-- pl.project-tile:
+year: 2023
+title: Light The Lives
+place: IEEE SIGHT
+Tech: Solar-Energy Sustainability Community Outreach
+link: https://ieeexplore.ieee.org/document/10167546?denied=
+;; link-github:
+
+-- pl.project-tile:
+year: 2023
+title: Taphy
+place: Make-A-Ton
+Tech: Python NLP Prompt-Engineering Data Analysis Taipy
+link: https://youtu.be/6ESZHCsAuQQ
+link-github: https://github.com/shaheen-senpai/Mak_A_Ton_6
+
+-- pl.project-tile:
+year: 2023
+title: Fastn UI Library
+place: Trizwit
+Tech: Fastn CSS Html Figma
+link: https://trizui.trizwit.com/
+link-github: https://github.com/Trizwit/fas10UI
+
+-- pl.project-tile:
+year: 2023
+title: web3innovnex Client Website 
+place: Trizwit
+Tech: Fastn CSS Html
+link: https://trizwit.github.io/web3innovnex/
+;; link-github:
+
+-- pl.project-tile:
+year: 2023
+title: SmartQuest
+place: Academic
+Tech: LLM GPT-3.5 FastAPI Firebase React TailwindCSS
+link: https://qgen-mnns.netlify.app/
+link-github: https://github.com/marahim20/qgenFinal
+
+-- pl.project-tile:
+year: 2023
+title: Mission Impossible
 place: Personal
-Tech: HTML, CSS, JS
-link: https://shaheen-senpai.github.io/shaheen-senpai.github.io/
-link-github: https://github.com/shaheen-senpai
+Tech: Arduino Embedded Systems C programming
 
 -- pl.project-tile:
-year: 2021
-title: Flix
-place: Personal
-Tech: HTML, CSS, JS
-link: https://shaheen-senpai.github.io/flix/
-link-github: 
+year: 2023
+title: ThreeFlaneurs
+place: Trizwit
+Tech: Fastn Css Html
+link: https://shaheen-senpai.github.io/ThreeFlaneurs/
+link-github: https://github.com/shaheen-senpai/ThreeFlaneurs
 
 -- pl.project-tile:
-
--- pl.project-tile:
+year: 2022
+title: Heart Attack Prediction
+place: Academic
+Tech: ML Data Analysis Python
+link-github: https://github.com/shaheen-senpai/S5LABDS/blob/cd61c3f0bfd26ed2c281d19beb8dddfa44054df4/DATA%20ANALYSIS/Mini%20Project/heart_atk_prediction.ipynb
 
 
 

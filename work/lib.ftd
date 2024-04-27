@@ -52,7 +52,7 @@ margin-top.px: 10
 role: $fira-code-size-20-400
 color: #64ffda
 
--- ftd.text: Some Things I’ve Built
+-- ftd.text: Some Things I’ve Done
 role: $inter-font-size-26-600
 color: #ccd6f6
 
@@ -133,6 +133,8 @@ width: fill-container
 height: hug-content
 fit: cover
 src: $project-hero-1.image
+;; border-top-right-radius.px: 8
+;; border-bottom-right-radius.px: 8
 
 -- end: ftd.column
 
@@ -169,6 +171,8 @@ text-align: end
 background.solid: #112240
 margin-bottom.px: 25
 classes: para
+border-top-left-radius.px: 8
+border-bottom-left-radius.px: 8
 
 -- ftd.text: $project-hero-1.keywords
 role: $fira-code-size-14-400
@@ -411,6 +415,8 @@ text-align: start
 background.solid: #112240
 margin-bottom.px: 25
 classes: para
+border-top-right-radius.px: 8
+border-bottom-right-radius.px: 8
 
 -- ftd.text: $project-hero-2.keywords
 role: $fira-code-size-14-400
@@ -495,6 +501,8 @@ width: fill-container
 height: hug-content
 fit: cover
 src: $project-hero-2.image
+;; border-bottom-left-radius.px: 8
+;; border-top-left-radius.px: 8
 
 -- end: ftd.column
 

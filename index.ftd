@@ -5,18 +5,16 @@
 -- import: shaheen-senpai.tech/projects/lib as pl
 
 
-
 -- page:
-
 
 
 ;; ......................................................hero component..................................................
 -- lib.hero:
 name: Shaheen Siddique. N
 title: I love to Code.
-description: I am a passionate and driven student pursuing a BTech degree in computer science, dedicated to gaining hands-on experience and knowledge in various aspects of technology. 
+description: I am a passionate and driven student pursuing a BTech degree in computer science, dedicated to gaining hands-on experience and knowledge in various aspects of technology.
 cta-button-text: Check out my work!
-cta-button-link: index.html
+cta-button-link: https://github.com/shaheen-senpai
 ;; ........................................................hero end.......................................................
 
 
@@ -26,58 +24,70 @@ cta-button-link: index.html
 -- al.about:
 cover: $assets.files.about.shaheen.jpeg
 
--- al.about-content:
-para-1: Hey there! I'm Shaheen Siddique, a passionate tech enthusiast on a journey to explore the vast realms of computer science. My fascination with technology sparked during my college years, where I dove into the world of data science, programming, and innovative project development.
-para-2: Currently pursuing a BTech degree in Computer Science at Mar Athanasius College of Engineering, Kothamangalam, I've been honing my skills through hands-on experiences and exciting projects.
-para-3: Beyond the classroom, my tech adventure has taken me on some pretty exciting rides. From tackling real-world challenges as an intern at TRIZWIT LABS to leading creative missions at AISA MACE and IEDC MACE, every project is a chance to dive into the thrill of tech. It's not just about coding; it's about turning ideas into reality, experimenting, and enjoying every bit of the creative journey.
-skills-text: My tech mojo and wizardry include :
-
--- ftd.row:
-width: fill-container
-height: hug-content
-spacing.fixed.px: 20
-margin-top.px: 20
-margin-bottom.px: 20
-wrap: true
-
-;; skills content 
--- al.about-skill:
-skill-name: Python
-color: #ffca28
-
--- al.about-skill:
-skill-name: C++
-color: #ffca28
-
--- al.about-skill:
-skill-name: R programming
-color: #ffca28
-
--- al.about-skill:
-skill-name: HTML
-color: #ffca28
-
--- al.about-skill:
-skill-name: CSS
-color: #ffca28
-
--- al.about-skill:
-skill-name: Firebase
-color: #ffca28
-
--- al.about-skill:
-skill-name: SQL
-color: #ffca28
-
--- al.about-skill:
-skill-name: Data Analysis
-color: #ffca28
-
--- al.about-skill:
-skill-name: Machine Learning
-color: #ffca28
-
--- end: ftd.row
+	-- al.about-content:
+	para-1: Hey there! I'm Shaheen Siddique, a passionate tech enthusiast on a journey to explore the vast realms of computer science. My fascination with technology sparked during my college years, where I dove into the world of data science, programming, and innovative project development.
+	para-2: Currently pursuing a BTech degree in Computer Science at Mar Athanasius College of Engineering, Kothamangalam, I've been honing my skills through hands-on experiences and exciting projects.
+	para-3: Beyond the classroom, my tech adventure has taken me on some pretty exciting rides. From tackling real-world challenges as an intern at TRIZWIT LABS to leading creative missions at AISA MACE and IEDC MACE, every project is a chance to dive into the thrill of tech. It's not just about coding; it's about turning ideas into reality, experimenting, and enjoying every bit of the creative journey.
+	skills-text: My tech mojo and wizardry include :
+	
+	-- ftd.row:
+	width: fill-container
+	height: hug-content
+	spacing.fixed.px: 20
+	margin-top.px: 20
+	margin-bottom.px: 20
+	wrap: true
+	
+		;; skills content
+		-- al.about-skill:
+		skill-name: Python
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: C++
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: R programming
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: HTML
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: CSS
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: Firebase
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: FastAPI
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: Node.js
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: SQL
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: Data Analysis
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: Machine Learning
+		color: #ffca28
+		
+		-- al.about-skill:
+		skill-name: Fastn
+		color: #ffca28
+		
+	-- end: ftd.row
 
 -- end: al.about
 ;; .......................................................about end.......................................................
@@ -89,181 +99,210 @@ color: #ffca28
 -- el.experience:
 
 
-;; experience content desktop--------------------------------------
--- ftd.desktop:
--- ftd.row:
-width: fill-container
-min-height.fixed.vh: 60
-max-height: hug-content
+	;; experience content desktop--------------------------------------
+	-- ftd.desktop:
+		-- ftd.row:
+		width: fill-container
+		min-height.fixed.vh: 60
+		max-height: hug-content
+		
+		
+			;; roles and companies...........................
+			-- ftd.column:
+			width: hug-content
+			height: auto
+			
+				-- el.experience-button:
+				company-name: Trizwit
+				
+				-- el.experience-button:
+				company-name: IEDC Mace
+				
+				-- el.experience-button:
+				company-name: AISA Mace
+				
+			-- end: ftd.column
+			;; roles and companies end.......................
 
 
-;; roles and companies...........................
--- ftd.column:
-width: hug-content
-height: auto
+			-- ftd.column:
+			width: auto
+			height: auto
+			spacing.fixed.px: 25
+			margin-left.px: 25
+			
+			
+			
+				-- el.experience-details:
+				company-name: Trizwit
+				role: Software Developer Intern
+				duration: May 2023 - Present
+				
+				-- el.experience-paragraph:
+				company-name: Trizwit
+				para: At Trizwit, I got to flex my coding muscles as a Software Development Engineering Intern. My mission? Tackle the wild world of web development using FASTN, this cool new full-stack web framework straight outta India.
+				
+				-- el.experience-paragraph:
+				company-name: Trizwit
+				para: Imagine me, the digital architect, building websites and pages that pop like confetti—all thanks to the nifty tricks up FASTN's sleeve. It's like painting with pixels, where every line of code adds a splash of creativity to the canvas of the internet.
+				
+				-- el.experience-paragraph:
+				company-name: Trizwit
+				para: But it wasn't all solitary coding marathons. Nope! I teamed up with fellow tech enthusiasts, brainstorming and problem-solving our way through the digital wilderness. Together, we fused front-end flair with back-end wizardry, ensuring our creations not only looked good but worked like a charm too.
+				
+				;; -- el.experience-paragraph:
+				;; company-name: Trizwit
+				;; para: Trizwit wasn't just a gig; it was a crash course in innovation and collaboration. And you know what? I loved every byte of it.
+				
+				
+				
+				
+				-- el.experience-details:
+				company-name: IEDC Mace
+				role: Operations Lead
+				duration: 2022 - 2023
+				
+				-- el.experience-paragraph:
+				company-name: IEDC Mace
+				para: At IEDC Mace, I took the reins as the Operations Lead, steering a dynamic array of innovation and entrepreneurship initiatives. From hackathons pulsing with creativity to idea pitching sessions brimming with potential, alongside my dedicated team, we orchestrated a symphony of programs aimed at nurturing the entrepreneurial spirit.
+				
+				-- el.experience-paragraph:
+				company-name: IEDC Mace
+				para: Our efforts weren't just about organizing events; they were about cultivating an ecosystem where innovation thrived. We facilitated mentorship sessions where wisdom flowed freely and workshops where insights sparked new ideas. Together, we empowered aspiring entrepreneurs to transform their visions into reality.
+				
+				-- el.experience-paragraph:
+				company-name: IEDC Mace
+				para: Each day brought new challenges and opportunities, and I embraced them wholeheartedly. Whether rallying teams for a hackathon sprint or guiding entrepreneurs through strategic planning, I was committed to driving impact and fostering growth at every turn.
+				
+				
+				
+				
+				-- el.experience-details:
+				company-name: AISA Mace
+				role: Creative Lead
+				duration: 2022 - 2023
+				
+				-- el.experience-paragraph:
+				company-name: AISA Mace
+				para: As the Creative Lead for the Space Club at AISA MACE, I embarked on an exhilarating journey of exploration and imagination. Together with an enthusiastic team, we delved into the cosmos, igniting curiosity and sparking creativity through a series of engaging events and workshops.
+				
+				-- el.experience-paragraph:
+				company-name: AISA Mace
+				para: But perhaps our crowning achievement was the creation of our very own 90x telescope—a marvel of ingenuity that allowed us to gaze upon Jupiter and the moon in breathtaking detail. It was a labor of love, a testament to our passion for discovery and innovation.
+				
+				-- el.experience-paragraph:
+				company-name: AISA Mace
+				para: Yet, amidst all the cosmic exploration and technological tinkering, one thing remained constant: the sheer joy we found in every moment. From late-night stargazing sessions to impromptu brainstorming bonanzas, I couldn't help but smile, knowing that I was part of something truly special.
+				
+				
+				
+				
+			-- end: ftd.column
 
--- el.experience-button:
-company-name: Trizwit
-
--- el.experience-button:
-company-name: IEDC Mace
-
--- el.experience-button:
-company-name: AISA Mace
-
--- end: ftd.column
-;; roles and companies end.......................
-
-
--- ftd.column:
-width: auto
-height: auto
-spacing.fixed.px: 25
-margin-left.px: 25
-
-
-
--- el.experience-details:
-company-name: Trizwit
-role: Software Developer
-duration: May 2020 - Present
-
--- el.experience-paragraph:
-company-name: Trizwit
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis.
-
--- el.experience-paragraph:
-company-name: Trizwit
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. 
-
--- el.experience-paragraph:
-company-name: Trizwit
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis.
-
-
-
-
--- el.experience-details:
-company-name: IEDC Mace
-role: Software Developer
-duration: 2020 - 2021
-
--- el.experience-paragraph:
-company-name: IEDC Mace
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
-
--- el.experience-paragraph:
-company-name: IEDC Mace
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
-
-
-
-
--- el.experience-details:
-company-name: AISA Mace
-role: Software Developer
-duration: 2020 - 2021
-
--- el.experience-paragraph:
-company-name: AISA Mace
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
-
-
-
-
-
-
-
--- end: ftd.column
-
--- end: ftd.row
--- end: ftd.desktop
-;; end: experience content desktop----------------------------------------------
-
-
-
-;; experience content mobile----------------------------------------------------
-
--- ftd.mobile:
-
--- ftd.column:
-width: fill-container
-min-height.fixed.vh: 70
-height: auto
-
--- ftd.row:
-width.fixed.vw: 80  
-height: auto
-overflow-x: scroll
-;; css: $assets.files.styles.style.css
-;; classes: scroller
-
-;; roles and companies...........................
--- el.experience-button:
-company-name: Trizwit
-
--- el.experience-button:
-company-name: IEDC Mace
-
--- el.experience-button:
-company-name: AISA Mace
-
-;; roles and companies end.......................
-
--- end: ftd.row
-
-
--- ftd.column:
-width.fixed.vw: 80
-height: auto
-spacing.fixed.px: 25
-
--- el.experience-details:
-company-name: Trizwit
-role: Software Developer
-duration: May 2020 - Present
-
--- el.experience-paragraph:
-company-name: Trizwit
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis.
-
--- el.experience-paragraph:
-company-name: Trizwit
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. 
-
-
--- el.experience-details:
-company-name: IEDC Mace
-role: Software Developer
-duration: 2020 - 2021
-
--- el.experience-paragraph:
-company-name: IEDC Mace
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
-
--- el.experience-paragraph:
-company-name: IEDC Mace
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. 
+		-- end: ftd.row
+	-- end: ftd.desktop
+	;; end: experience content desktop----------------------------------------------
 
 
 
--- el.experience-details:
-company-name: AISA Mace
-role: Software Developer
-duration: 2020 - 2021
+	;; experience content mobile----------------------------------------------------
 
--- el.experience-paragraph:
-company-name: AISA Mace
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa.
+	-- ftd.mobile:
+	
+		-- ftd.column:
+		width: fill-container
+		min-height.fixed.vh: 70
+		height: auto
+		
+			-- ftd.row:
+			width.fixed.vw: 80
+			height: auto
+			overflow-x: scroll
+			;; css: $assets.files.styles.style.css
+			;; classes: scroller
+			
+				;; roles and companies...........................
+				-- el.experience-button:
+				company-name: Trizwit
+				
+				-- el.experience-button:
+				company-name: IEDC Mace
+				
+				-- el.experience-button:
+				company-name: AISA Mace
+				
+				;; roles and companies end.......................
+			-- end: ftd.row
 
 
+			-- ftd.column:
+			width.fixed.vw: 80
+			height: auto
+			spacing.fixed.px: 25
+			
+				-- el.experience-details:
+				company-name: Trizwit
+				role: Software Developer
+				duration: May 2023 - Present
+				
+				-- el.experience-paragraph:
+				company-name: Trizwit
+				para: At Trizwit, I got to flex my coding muscles as a Software Development Engineering Intern. My mission? Tackle the wild world of web development using FASTN, this cool new full-stack web framework straight outta India.
+				
+				-- el.experience-paragraph:
+				company-name: Trizwit
+				para: Imagine me, the digital architect, building websites and pages that pop like confetti—all thanks to the nifty tricks up FASTN's sleeve. It's like painting with pixels, where every line of code adds a splash of creativity to the canvas of the internet.
+				
+				-- el.experience-paragraph:
+				company-name: Trizwit
+				para: But it wasn't all solitary coding marathons. Nope! I teamed up with fellow tech enthusiasts, brainstorming and problem-solving our way through the digital wilderness. Together, we fused front-end flair with back-end wizardry, ensuring our creations not only looked good but worked like a charm too.
+				
+				
+				
+				-- el.experience-details:
+				company-name: IEDC Mace
+				role: Software Developer
+				duration: 2022 - 2023
+				
+				-- el.experience-paragraph:
+				company-name: IEDC Mace
+				para: At IEDC Mace, I took the reins as the Operations Lead, steering a dynamic array of innovation and entrepreneurship initiatives. From hackathons pulsing with creativity to idea pitching sessions brimming with potential, alongside my dedicated team, we orchestrated a symphony of programs aimed at nurturing the entrepreneurial spirit.
+				
+				-- el.experience-paragraph:
+				company-name: IEDC Mace
+				para: Our efforts weren't just about organizing events; they were about cultivating an ecosystem where innovation thrived. We facilitated mentorship sessions where wisdom flowed freely and workshops where insights sparked new ideas. Together, we empowered aspiring entrepreneurs to transform their visions into reality.
+				
+				-- el.experience-paragraph:
+				company-name: IEDC Mace
+				para: Each day brought new challenges and opportunities, and I embraced them wholeheartedly. Whether rallying teams for a hackathon sprint or guiding entrepreneurs through strategic planning, I was committed to driving impact and fostering growth at every turn.
+				
+				
+				
+				-- el.experience-details:
+				company-name: AISA Mace
+				role: Software Developer
+				duration: 2022 - 2023
+				
+				-- el.experience-paragraph:
+				company-name: AISA Mace
+				para: As the Creative Lead for the Space Club at AISA MACE, I embarked on an exhilarating journey of exploration and imagination. Together with an enthusiastic team, we delved into the cosmos, igniting curiosity and sparking creativity through a series of engaging events and workshops.
+				
+				-- el.experience-paragraph:
+				company-name: AISA Mace
+				para: But perhaps our crowning achievement was the creation of our very own 90x telescope—a marvel of ingenuity that allowed us to gaze upon Jupiter and the moon in breathtaking detail. It was a labor of love, a testament to our passion for discovery and innovation.
+				
+				-- el.experience-paragraph:
+				company-name: AISA Mace
+				para: Yet, amidst all the cosmic exploration and technological tinkering, one thing remained constant: the sheer joy we found in every moment. From late-night stargazing sessions to impromptu brainstorming bonanzas, I couldn't help but smile, knowing that I was part of something truly special.
+				
+				
+				
+				
+			-- end: ftd.column
 
-
--- end: ftd.column
-
--- end: ftd.column
--- end: ftd.mobile
-;; end: experience content mobile-----------------------------------------------
+		-- end: ftd.column
+	-- end: ftd.mobile
+	;; end: experience content mobile-----------------------------------------------
 
 
 -- end: el.experience
@@ -275,35 +314,34 @@ para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nis
 ;; .......................................................work component...................................................
 -- wl.work:
 
-;; type "NONE" for links if you dont want to add them
-
--- wl.project-hero-1:
-image: $assets.files.work.pro-1.png
-category: Web Development
-title: Trizwit
-description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-keywords: VS Code Sublime Text Atom iTerm2 Hyper
-link-github: NONE cancel
-link-project: NONE cancel
-
--- wl.project-hero-2:
-image: $assets.files.work.pro-1.png
-category: Web Development
-title: Trizwit
-description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-keywords: VS Code Sublime Text Atom iTerm2 Hyper
-link-github: NONE
-link-project: NONE cancel
-
--- wl.project-hero-1:
-image: $assets.files.work.pro-1.png
-category: Web Development
-title: Trizwit
-description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-keywords: VS Code Sublime Text Atom iTerm2 Hyper
-link-github: NONE cancel
-link-project: NONE
-
+	;; type "NONE" for links if you dont want to add them
+	-- wl.project-hero-1:
+	image: $assets.files.work.proj-1.png
+	category: Web Development
+	title: SmartQuest
+	description: The project streamlines question generation from text, leveraging language learning models to generate insightful and contextually relevant questions.
+	keywords: LLM GPT-3.5 FastAPI Firebase React TailwindCSS
+	link-github: https://github.com/marahim20/qgenFinal
+	link-project: https://qgen-mnns.netlify.app/
+	
+	-- wl.project-hero-2:
+	image: $assets.files.work.proj-2.png
+	category: Web Development
+	title: NewsAI
+	description: Built an AI-powered news aggregator that tailors articles to user interests, improving information access and reducing redundancy.
+	keywords: Gemini GPT-3.5 FastAPI Next.js TailwindCSS Beautiful-Soup SiameseBERT
+	link-github: https://github.com/orgs/4Newz/repositories
+	link-project: NONE
+	
+	-- wl.project-hero-1:
+	image: $assets.files.work.proj-3.png
+	category: Humanitarian Project
+	title: Light The Lives
+	description: A social initiative to provide solar panel & lamps to underprivileged communities, promoting sustainable energy access and environmental conservation.
+	keywords: Solar-Energy Sustainability Community Outreach
+	link-github: NONE
+	link-project: https://ieeexplore.ieee.org/document/10167546?denied=
+	
 -- end: wl.work
 ;; .......................................................work end........................................................
 
@@ -314,42 +352,42 @@ link-project: NONE
 ;; .......................................................project component................................................
 -- pl.project:
 
--- pl.project-card:
-title: Trizwit
-description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-keywords: VS Code Sublime Text Atom iTerm2 Hyper
-link-github: NONE cancel
-link-project: NONE dgb
-
--- pl.project-card:
-title: Trizwit
-description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-keywords: VS Code Sublime Text Atom iTerm2 Hyper
-link-github: NONE cancel
-link-project: NONE dgb
-
--- pl.project-card:
-title: Trizwit
-description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-keywords: VS Code Sublime Text Atom iTerm2 Hyper
-link-github: NONE cancel
-link-project: NONE dgb
-
--- pl.project-card:
-title: Trizwit
-description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-keywords: VS Code Sublime Text Atom iTerm2 Hyper
-link-github: NONE cancel
-link-project: NONE dgb
-
--- pl.project-card:
-title: Trizwit
-description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-keywords: VS Code Sublime Text Atom iTerm2 Hyper
-link-github: NONE cancel
-link-project: NONE dgb
-
-
+	-- pl.project-card:
+	title: Heart-Attack Prediction
+	description: Utilized various machine learning models and libraries such as pandas, scikit-learn, etc. to analyze and preprocess data, and predict heart attacks.
+	keywords: ML Data Analysis Python
+	link-github: https://github.com/shaheen-senpai/S5LABDS/blob/cd61c3f0bfd26ed2c281d19beb8dddfa44054df4/DATA%20ANALYSIS/Mini%20Project/heart_atk_prediction.ipynb
+	link-project: NONE
+	
+	-- pl.project-card:
+	title: Mission Impossible
+	description: Connected lasers and sensors to an Arduino Uno board and create a laser maze for tech-fest, demonstrating proficiency in embedded systems and micro-controller programming.
+	keywords: Arduino Embedded Systems C program
+	link-github: NONE
+	link-project: NONE
+	
+	-- pl.project-card:
+	title: Taphy
+	description: Data visualization from NLP. Users can enter prompts to draw up visuals and insights for thier database or CSV data. A No-Code Tool for Data Analysis.
+	keywords: Python NLP Prompt-Engineering Data Analysis Taipy
+	link-github: https://github.com/shaheen-senpai/Mak_A_Ton_6
+	link-project: https://youtu.be/6ESZHCsAuQQ
+	
+	-- pl.project-card:
+	title: Fastn UI Library
+	description: A collection of UI components and templates for FASTN, a full-stack web framework. The library includes templates, forms, modals, and more, designed to streamline web development.
+	keywords: Fastn CSS Html Figma
+	link-github: https://github.com/Trizwit/fas10UI
+	link-project: https://trizui.trizwit.com/
+	
+	;; -- pl.project-card:
+	;; title: Trizwit
+	;; description: A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+	;; keywords: VS Code Sublime Text Atom iTerm2 Hyper
+	;; link-github: NONE cancel
+	;; link-project: NONE dgb
+	
+	
 -- end: pl.project
 ;; .......................................................project end.....................................................
 
@@ -402,58 +440,57 @@ height if {ftd.device == "mobile"}: auto
 css: $assets.files.styles.style.css
 classes: body
 
--- ftd.column:
-width: fill-container
-height: auto
-background.solid: #0a192f
+	-- ftd.column:
+	width: fill-container
+	height: auto
+	background.solid: #0a192f
+	
+	;; start of page
+	
+	
+		;; navbar component
+		-- nb.navbar:
+		logo: $assets.files.assets.logo.svg
+		cta-text-1: About
+		cta-text-2: Experience
+		cta-text-3: Work
+		cta-text-4: Contact
+		cta-link-1: /#about
+		cta-link-2: /#experience
+		cta-link-3: /#work
+		cta-link-4: /#contact
+		cta-button-text: Resume
+		cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
+		
+		-- nb.navbar-drop-down:
+		cta-text-1: About
+		cta-text-2: Experience
+		cta-text-3: Work
+		cta-text-4: Contact
+		cta-link-1: /#about
+		cta-link-2: /#experience
+		cta-link-3: /#work
+		cta-link-4: /#contact
+		cta-button-text: Resume
+		cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
+		;; navbar end
+		
+		
+		;; components start
+		-- ftd.column:
+		width: fill-container
+		height: hug-content
+		padding-horizontal.percent: 9
+		children: $page.child
+		
+			;; page content and components...........
+		-- end: ftd.column
+		;; components end
 
-;; start of page
 
+		;; end of page
 
-;; navbar component
--- nb.navbar: 
-logo: $assets.files.assets.logo.svg
-cta-text-1: About
-cta-text-2: Experience
-cta-text-3: Work
-cta-text-4: Contact
-cta-link-1: /#about
-cta-link-2: /#experience
-cta-link-3: /#work
-cta-link-4: /#contact
-cta-button-text: Resume
-cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
-
--- nb.navbar-drop-down:
-cta-text-1: About
-cta-text-2: Experience
-cta-text-3: Work
-cta-text-4: Contact
-cta-link-1: /#about
-cta-link-2: /#experience
-cta-link-3: /#work
-cta-link-4: /#contact
-cta-button-text: Resume
-cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
-;; navbar end
-
-
-;; components start
--- ftd.column:
-width: fill-container
-height: hug-content
-padding-horizontal.percent: 9
-children: $page.child
-
-;; page content and components...........
-
--- end: ftd.column
-;; components end
-
-
-;; end of page
-
--- end: ftd.column
+	-- end: ftd.column
 
 -- end: ftd.column
 

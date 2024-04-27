@@ -211,6 +211,7 @@ spacing.fixed.px: 10
 -- ftd.image:
 width.fixed.vw: 1
 src: $assets.files.assets.bulletin.svg
+margin-top.vw: 0.26
 
 -- ftd.text: $experience-paragraph.para
 role: $inter-font-size-16-400
@@ -231,6 +232,7 @@ spacing.fixed.px: 10
 -- ftd.image:
 width.fixed.vw: 5
 src: $assets.files.assets.bulletin.svg
+margin-top.vw: 0.33 
 
 -- ftd.text: $experience-paragraph.para
 role: $inter-font-size-16-400
