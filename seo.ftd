@@ -1,0 +1,14 @@
+-- import: fastn-community.github.io/doc-site as ds
+
+
+
+-- ds.page: Shaheen's Portfolio
+document-title: Portfolio
+document-description: Take a look at shaheen's work !
+document-image: https://raw.githubusercontent.com/shaheen-senpai/portfolio-fastn/main/assets/seo.png
+
+
+-- ftd.text: hello world
+color: white
+
+-- end: ds.page
