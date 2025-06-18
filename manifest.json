@@ -127,8 +127,8 @@
     },
     "index.ftd": {
       "name": "index.ftd",
-      "checksum": "616A0EE6B18A558BBB70F3D99A495040C0AD3680EF19FFA325E72FFD1C888E30",
-      "size": 18245
+      "checksum": "E25B8485EB829E32B5C0CDE3D2844AF9A538830365AECCE0EAC421E208F7DB71",
+      "size": 18373
     },
     "lib.ftd": {
       "name": "lib.ftd",
@@ -187,5 +187,5 @@
     }
   },
   "zip_url": "https://codeload.github.com/shaheen-senpai/portfolio-fastn/zip/refs/heads/main",
-  "checksum": "D9D249B2EE80E1378E5B1785A64A0A16AF71AE45C87C94E65DDC7748A9DABE40"
+  "checksum": "B740EC12DEB92A446DE4A5A494AAAAAFAC135CB86C9E8A5C785EFF02893A7F8C"
 }
