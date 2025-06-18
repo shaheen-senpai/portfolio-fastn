@@ -455,10 +455,10 @@ classes: body
 		cta-text-2: Experience
 		cta-text-3: Work
 		cta-text-4: Contact
-		cta-link-1: /#about
-		cta-link-2: /#experience
-		cta-link-3: /#work
-		cta-link-4: /#contact
+		cta-link-1: /portfolio-fastn/#about
+		cta-link-2: /portfolio-fastn/#experience
+		cta-link-3: /portfolio-fastn/#work
+		cta-link-4: /portfolio-fastn/#contact
 		cta-button-text: Resume
 		cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
 		
@@ -467,10 +467,10 @@ classes: body
 		cta-text-2: Experience
 		cta-text-3: Work
 		cta-text-4: Contact
-		cta-link-1: /#about
-		cta-link-2: /#experience
-		cta-link-3: /#work
-		cta-link-4: /#contact
+		cta-link-1: /portfolio-fastn/#about
+		cta-link-2: /portfolio-fastn/#experience
+		cta-link-3: /portfolio-fastn/#work
+		cta-link-4: /portfolio-fastn/#contact
 		cta-button-text: Resume
 		cta-button-link: https://rxresu.me/shaheen50053/shaheen-r2
 		;; navbar end
