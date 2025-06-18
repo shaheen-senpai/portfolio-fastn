@@ -1,14 +1,9 @@
 {
   "files": {
-    "CNAME": {
-      "name": "CNAME",
-      "checksum": "BC20A2F2E1B1669B0C201524BCBB2102E4AFED29002EEFAC4301211C76CB0AA9",
-      "size": 24
-    },
     "FASTN.ftd": {
       "name": "FASTN.ftd",
-      "checksum": "F4E860A776439D29A3B548B95AABE93F1319BFCC22AE4D0E274C719433B221DF",
-      "size": 692
+      "checksum": "EA51AFBF473E5C3FEB50CCF5355F83301A34FA32EB36C4E7BCCE8B51BA15187D",
+      "size": 776
     },
     "README.md": {
       "name": "README.md",
@@ -132,13 +127,13 @@
     },
     "index.ftd": {
       "name": "index.ftd",
-      "checksum": "DCC648E490A6F6D3342FC3241C4A94436B6BD65E4F0D84E2891100508E03D1F0",
-      "size": 18140
+      "checksum": "616A0EE6B18A558BBB70F3D99A495040C0AD3680EF19FFA325E72FFD1C888E30",
+      "size": 18245
     },
     "lib.ftd": {
       "name": "lib.ftd",
-      "checksum": "14CE724DA1174C6D6C17576A77BB1617DFAC552A9835D4BEF72D4FC0FD37AB31",
-      "size": 9843
+      "checksum": "561E33844315B277C8821E5ECD8B00FAF12A1F560FD2C5B7C4C7BFCB1F684B11",
+      "size": 9864
     },
     "navbar.ftd": {
       "name": "navbar.ftd",
@@ -147,8 +142,8 @@
     },
     "projects/index.ftd": {
       "name": "projects/index.ftd",
-      "checksum": "2355EBF095CD57A238B2A315F257DD06F943A824B5F4B04A0066F09663F2FED8",
-      "size": 5929
+      "checksum": "79BBEB9C70155E75B2F933AA406718DFD1C3522E46C1C4734EDE66D11A8FA095",
+      "size": 5971
     },
     "projects/lib.ftd": {
       "name": "projects/lib.ftd",
@@ -192,5 +187,5 @@
     }
   },
   "zip_url": "https://codeload.github.com/shaheen-senpai/portfolio-fastn/zip/refs/heads/main",
-  "checksum": "E4BACAE1C44B4D879C82E07190E9771844B51535F24FC772C0B19328DFDCB277"
+  "checksum": "38CFEB4D11DC1BC019D40ADB53ED968E497BBF185BB4BCA3B43796258ACE9389"
 }
